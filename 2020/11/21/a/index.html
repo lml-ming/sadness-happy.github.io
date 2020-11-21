@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> - 等来清晨</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="什么是原型链对象原型相信大家都这样用过 map ：
+1...">
+  <meta name="author" content="等来清晨">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome-image.jpg',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          api: 'https://v1.hitokoto.cn/?encode=text&c=d'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 前端</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">等来清晨</a>  |   - <a target="_blank" href="https://github.com/sadness-happy/sadness-happy.github.io">GitHub</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 21, 2020</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4101</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="什么是原型链"><a href="#什么是原型链" class="headerlink" title="什么是原型链"></a>什么是原型链</h1><h2 id="对象原型"><a href="#对象原型" class="headerlink" title="对象原型"></a>对象原型</h2><p>相信大家都这样用过 <code>map</code> ：</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nix"><span class="hljs-keyword">let</span> <span class="hljs-attr">arr</span> = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]<br><span class="hljs-keyword">let</span> <span class="hljs-attr">doubleArr</span> = arr.<span class="hljs-built_in">map</span>(<span class="hljs-attr">c</span> =&gt; c * <span class="hljs-number">2</span>)<br>console.log(doubleArr) // <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
+
+<p>不知道你有没有想过， <code>arr</code> 本身并没有设定 <code>map</code> 属性，那为什么可以用 <code>map</code> 这个函数呢？</p>
+<p>把它打印出来看看：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">console.log(arr)<br><span class="hljs-regexp">//</span> <span class="hljs-number">0</span>: <span class="hljs-number">0</span><br><span class="hljs-regexp">//</span> <span class="hljs-number">1</span>: <span class="hljs-number">1</span><br><span class="hljs-regexp">//</span> <span class="hljs-number">2</span>: <span class="hljs-number">2</span><br><span class="hljs-regexp">//</span> length: <span class="hljs-number">3</span><br><span class="hljs-regexp">//</span> __proto__: Array(<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
+
+<p>出现了一个名为 <code>__proto__</code> 的对象，如果再将其展开，就会看到所有 Array 对象可以使用的函数；当然我们也可以在其中找到 <code>map</code> 函数，而这也正是例子中所调用的 <code>arr.map</code> 这个函数：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">console.<span class="hljs-built_in">log</span>(arr.<span class="hljs-built_in">map</span> === arr.__proto__.<span class="hljs-built_in">map</span>) <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+
+<p>这里出现的 <code>__proto__</code> 对象，也就是所谓的 <strong>原型对象（Prototype）</strong> 。</p>
+<p>不同于 Java、C# 等<strong>基于类（Class）</strong> 的面向对象语言，通过定义类、创建实例、指定继承等方式来传递属性及方法；Javascript 则是个[<strong>基于原型（Prototype）的对语言</strong>]，通过预先建立出的原型对象，当新对象建立时指定对象的原型要参照哪个原型对象。</p>
+<p>而当我们调用对象的属性或方法时，若对象本身没有这个属性或方法，JavaScript 会自动寻找它原型中的方法，这也就是为什么可以直接调用 <code>arr.map</code> 而不会出错的原因。</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>你可能已经发现在前面的例子中，<code>__proto__</code> 对象里仍然有 <code>__proto__</code> 属性：</p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sqf">console.<span class="hljs-built_in">log</span>(arr.<span class="hljs-variable">__proto__</span>) <span class="hljs-comment">// Array 的 Prototype</span><br>console.<span class="hljs-built_in">log</span>(arr.<span class="hljs-variable">__proto__</span>.<span class="hljs-variable">__proto__</span>) <span class="hljs-comment">// Object 的 Prototype</span><br>console.<span class="hljs-built_in">log</span>(arr.<span class="hljs-variable">__proto__</span>.<span class="hljs-variable">__proto__</span>.<span class="hljs-variable">__proto__</span>) <span class="hljs-comment">// null</span><br></code></pre></td></tr></table></figure>
+
+<p>在上述机制中，每当对象建立时都会绑定原型，既然对象都有原型，对象原型本身也是对象，自然也不例外；由这个例子中我们可以看出：</p>
+<ul>
+<li><code>arr</code> 是数组实例，原型是 Array</li>
+<li><code>arr.__proto__</code> 是数组的原型，原型是 Object</li>
+<li><code>arr.__proto__.__proto__</code> 是对象的原型，原型是 <code>null</code></li>
+<li><code>arr.__proto__.__proto__.__proto__</code> 是 null，没有任何属性</li>
+</ul>
+<p>由于每个对象都有原型，这样就形成了一个关联一个、层层相互依赖的从属关系，我们把它们叫做<strong>原型链（Prototype Chain）</strong> ；通过这种机制，让对象得以使用原型中的属性和方法，并凭借原型链一层一层的按顺序继承，让对象能拥有原型链上所有原型的功能，这就是 JavaScript 对象背后的运作机制。</p>
+<blockquote>
+<p>补充：在 JavaScript 中，几乎每个原型链的末端都会是 Object，并最后指向到 <code>null</code>。</p>
+</blockquote>
+<h2 id="使用原型"><a href="#使用原型" class="headerlink" title="使用原型"></a>使用原型</h2><p>说了这么多，该来点代码了，接下来就来练习一下原型的建立、设定及修改吧。</p>
+<p>先来创建一个新的对象构造函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name</span>) </span>&#123;<br>  <span class="hljs-built_in">this</span>.name = name<br>&#125;Person.prototype.hello = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hello <span class="hljs-subst">$&#123;<span class="hljs-built_in">this</span>.name&#125;</span>.`</span>)<br>&#125;<span class="hljs-keyword">let</span> gary = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&#x27;Gary&#x27;</span>)<br>gary.hello() <span class="hljs-comment">// Hello Gary.Object.getPrototypeOf(gary) // &#123;hello: ƒ, constructor: ƒ&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>上面的例子创建了一个简单的对象构造函数 <code>Person()</code>，并在构造函数中设定对象属性。对象的方法中，由于方法不需要让每个对象都独自拥有一份，以避免造成冗余的内存消耗，应该要像前面 <code>Array.prototype.map</code> 的例子那样把对象的方法设定给原型对象（<code>Person.prototype</code>），让这个构造函数创建出来的对象都可以共用这些方法。最后建立一个新的 <code>Person</code> 对象，并通过 <code>getPrototypeOf(obj)</code> 获取新产生对象的原型。</p>
+<blockquote>
+<p>Q：为什么不直接用</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-strong">__proto__</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>获取原型对象？</p>
+<p>A：因为虽然</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-strong">__proto__</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>被几乎所有的浏览器支持，但它是非标准属性；通过</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">getPrototypeOf</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>取得对象的原型是正确的方法。</p>
+<p>提醒：<code>Person.prototype</code> 不是 <code>Person</code> 的原型，而是构造函数执行后所建立的新对象的原型；千万不要把<strong>构造函数的 <code>prototype</code> 属性</strong>与<strong>对象的原型</strong>搞混！</p>
+</blockquote>
+<h3 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h3><p>接着再创建新的对象原型，并继承 <code>Person</code>：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-keyword">function</span> <span class="hljs-constructor">Engineer(<span class="hljs-params">name</span>, <span class="hljs-params">skill</span>)</span> &#123;<br>  <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Person</span>.</span></span>call(this, name)<br>  this.skill = skill<br>&#125;<br><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Engineer</span>.</span></span>prototype = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Object</span>.</span></span>create(<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Person</span>.</span></span>prototype)<br><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Engineer</span>.</span></span>prototype.constructor = Engineerlet alice = <span class="hljs-keyword">new</span> <span class="hljs-constructor">Engineer(&#x27;Alice&#x27;, &#x27;JavaScript&#x27;)</span><br>alice.hello<span class="hljs-literal">()</span> <span class="hljs-comment">// Hello Alice.</span><br>console.log(alice.skill) <span class="hljs-comment">// JavaScriptObject.getPrototypeOf(alice) </span><br><span class="hljs-comment">// Person &#123;constructor: ƒ&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>这里建立了新的对象 <code>Engineer</code> 的原型，并通过 <code>Engineer.prototype</code> 的指定，让它的原型继承自 <code>Person.prototype</code>，最后再重新设定 <code>Engineer.prototype.constructor</code>，让构造函数重新指回自己；这样就完成了最基本的原型继承。</p>
+<blockquote>
+<p>Q：为什么需要重新设定 <code>constructor</code>？<br>A：这边功过 <code>Object.create</code> 复制了 <code>Person.prototype</code> 的全部属性，连同 <code>constructor</code> 属性都会被覆盖掉，如果 <code>constructor</code> 属性错误，在做 <code>instanceof</code> 判断时会产生错误的结果；因此这边设定继承时需要再次将 <code>constructor</code> 重新指定回构造函数本身。</p>
+</blockquote>
+<h3 id="修改原型"><a href="#修改原型" class="headerlink" title="修改原型"></a>修改原型</h3><p>原型的引用、继承是直接参照到原型对象上，并非是在每个对象都复制一份原型；因此可以利用这个特性，在原型上增加自定义的属性和方法，让所有该类型的对象都能得到新方法；许多针对旧版浏览器的 Polyfill 就是这样实现的。</p>
+<p>例如我们在写 Vue 项目的时候，可能都有做过类似的操作，把共用性高的属性方法放到 <code>Vue.prototype</code> 中：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Object</span>.</span></span>define<span class="hljs-constructor">Property(Vue.<span class="hljs-params">prototype</span>, &#x27;$<span class="hljs-params">date</span>&#x27;, &#123; <span class="hljs-params">value</span>: <span class="hljs-params">dateTimeFormat</span> &#125;)</span><br><span class="hljs-comment">// 之后就可以这样用</span><br>vm.<span class="hljs-constructor">$date(<span class="hljs-params">dateObj</span>)</span><br></code></pre></td></tr></table></figure>
+
+<p>这样的确很方便，但也要提醒开大家，当我们在做原型修改的时候要特别小心。接着刚才的例子，如果尝试对 <code>Person</code> 原型中的方法做个修改：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">Person.prototype.hello = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Bye <span class="hljs-subst">$&#123;<span class="hljs-built_in">this</span>.name&#125;</span>.`</span>)<br>&#125;gary.hello() <span class="hljs-comment">// Bye Gary.</span><br>alice.hello() <span class="hljs-comment">// Bye Alice.</span><br></code></pre></td></tr></table></figure>
+
+<p>如结果所示，当对象原型做修改时，所有原型链上有这个原型的对象，通通都会受到影响，不管对象是在修改前还是修改后创建的。</p>
+<p>建议大家除非是 Polyfill，否则应该要极力避免对原生对象的原型进行修改，防止造成可能的意外结果。</p>
+<h3 id="ES6-的-Class"><a href="#ES6-的-Class" class="headerlink" title="ES6 的 Class"></a>ES6 的 Class</h3><p>看完前面这一大段，是不是觉得心很累？别担心，从 ES6 开始添加了 <code>Class</code> 语法糖，使开发者体验提升了很多。下面把前面的例子用 <code>Class</code> 重构一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;<br>  <span class="hljs-title">constructor</span> (<span class="hljs-params">name</span>)&#123;<br>    <span class="hljs-built_in">this</span>.name = name<br>  &#125;<br>  <span class="hljs-comment">// 方法会自动放到 Person.prototype</span><br>  <span class="hljs-function"><span class="hljs-title">hello</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hello <span class="hljs-subst">$&#123;<span class="hljs-built_in">this</span>.name&#125;</span>.`</span>)<br>  &#125;<br>&#125;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Engineer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>&#123;<br>  <span class="hljs-title">constructor</span> (<span class="hljs-params">name, skill</span>)&#123;<br>    <span class="hljs-built_in">super</span>(name) <span class="hljs-comment">// 调用 Person 的构造函数</span><br>    <span class="hljs-built_in">this</span>.skill = skill<br>  &#125;<br>&#125;<span class="hljs-keyword">let</span> alice = <span class="hljs-keyword">new</span> Engineer(<span class="hljs-string">&#x27;Alice&#x27;</span>, <span class="hljs-string">&#x27;JavaScript&#x27;</span>)<br>alice.hello() <span class="hljs-comment">// Hello Alice.Object.getPrototypeOf(alice) </span><br><span class="hljs-comment">// Person &#123;constructor: ƒ&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>很方便，同样的功能，代码的可读性却提高了不少，繁琐的设定也都能交给语法自动帮你完成。不过方便的语法背后，底层仍然是对象原型及原型链。</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>等来清晨</li>
+    <li><strong>本文链接：</strong><a href="http://workhardjun.com/2020/11/21/a/index.html" title="http:&#x2F;&#x2F;workhardjun.com&#x2F;2020&#x2F;11&#x2F;21&#x2F;a&#x2F;index.html">http:&#x2F;&#x2F;workhardjun.com&#x2F;2020&#x2F;11&#x2F;21&#x2F;a&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        0
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2020/11/21/hello-world/">Hello World<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-text">什么是原型链</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%8E%9F%E5%9E%8B"><span class="toc-text">对象原型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-text">原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%9E%8B"><span class="toc-text">使用原型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF"><span class="toc-text">原型继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8E%9F%E5%9E%8B"><span class="toc-text">修改原型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6-%E7%9A%84-Class"><span class="toc-text">ES6 的 Class</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/izhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">等来清晨</a>  |   - <a target="_blank" href="https://github.com/sadness-happy/sadness-happy.github.io">GitHub</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
