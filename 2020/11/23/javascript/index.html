@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>javascript - 等来清晨</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="1、实现一个call函数123456789101112...">
+  <meta name="author" content="等来清晨">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome-image.jpg',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          api: 'https://v1.hitokoto.cn/?encode=text&c=d'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">javascript</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 前端</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">等来清晨</a>  |   - <a target="_blank" href="https://github.com/sadness-happy/sadness-happy.github.io">GitHub</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">javascript</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 23, 2020</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>12751</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="1、实现一个call函数"><a href="#1、实现一个call函数" class="headerlink" title="1、实现一个call函数"></a><strong>1、实现一个call函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路：将要改变this指向的方法挂到目标this上执行并返回</span><br><span class="hljs-built_in">Function</span>.prototype.mycall = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">context</span>) </span>&#123;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">this</span> !== <span class="hljs-string">&#x27;function&#x27;</span>) &#123;<br>    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&#x27;not funciton&#x27;</span>)<br>  &#125;<br>  context = context || <span class="hljs-built_in">window</span><br>  context.fn = <span class="hljs-built_in">this</span><br>  <span class="hljs-keyword">let</span> arg = [...arguments].slice(<span class="hljs-number">1</span>)<br>  <span class="hljs-keyword">let</span> result = context.fn(...arg)<br>  <span class="hljs-keyword">delete</span> context.fn<br>  <span class="hljs-keyword">return</span> result<br>&#125; <br></code></pre></td></tr></table></figure>
+
+<h2 id="2、实现一个apply函数"><a href="#2、实现一个apply函数" class="headerlink" title="2、实现一个apply函数"></a><strong>2、实现一个apply函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路：将要改变this指向的方法挂到目标this上执行并返回</span><br><span class="hljs-built_in">Function</span>.prototype.myapply = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">context</span>) </span>&#123;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">this</span> !== <span class="hljs-string">&#x27;function&#x27;</span>) &#123;<br>    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&#x27;not funciton&#x27;</span>)<br>  &#125;<br>  context = context || <span class="hljs-built_in">window</span><br>  context.fn = <span class="hljs-built_in">this</span><br>  <span class="hljs-keyword">let</span> result<br>  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]) &#123;<br>    result = context.fn(...arguments[<span class="hljs-number">1</span>])<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    result = context.fn()<br>  &#125;<br>  <span class="hljs-keyword">delete</span> context.fn<br>  <span class="hljs-keyword">return</span> result<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="3、实现一个bind函数"><a href="#3、实现一个bind函数" class="headerlink" title="3、实现一个bind函数"></a><strong>3、实现一个bind函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路：类似call，但返回的是函数</span><br><span class="hljs-built_in">Function</span>.prototype.mybind = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">context</span>) </span>&#123;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">this</span> !== <span class="hljs-string">&#x27;function&#x27;</span>) &#123;<br>    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&#x27;Error&#x27;</span>)<br>  &#125;<br>  <span class="hljs-keyword">let</span> _this = <span class="hljs-built_in">this</span><br>  <span class="hljs-keyword">let</span> arg = [...arguments].slice(<span class="hljs-number">1</span>)<br>  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-comment">// 处理函数使用new的情况</span><br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span> <span class="hljs-keyword">instanceof</span> F) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> _this(...arg, ...arguments)<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-keyword">return</span> _this.apply(context, arg.concat(...arguments))<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="4、instanceof的原理"><a href="#4、instanceof的原理" class="headerlink" title="4、instanceof的原理"></a><strong>4、instanceof的原理</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路：右边变量的原型存在于左边变量的原型链上</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">instanceOf</span>(<span class="hljs-params">left, right</span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> leftValue = left.__proto__<br>  <span class="hljs-keyword">let</span> rightValue = right.prototype<br>  <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>    <span class="hljs-keyword">if</span> (leftValue === <span class="hljs-literal">null</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br>    <span class="hljs-keyword">if</span> (leftValue === rightValue) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>    &#125;<br>    leftValue = leftValue.__proto__<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="5、Object-create的基本实现原理"><a href="#5、Object-create的基本实现原理" class="headerlink" title="5、Object.create的基本实现原理"></a><strong>5、Object.create的基本实现原理</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路：将传入的对象作为原型</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">create</span>(<span class="hljs-params">obj</span>) </span>&#123;<br>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F</span>(<span class="hljs-params"></span>) </span>&#123;&#125;<br>  F.prototype = obj<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> F()<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="6、new本质"><a href="#6、new本质" class="headerlink" title="6、new本质"></a><strong>6、new本质</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myNew</span> (<span class="hljs-params">fun</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-comment">// 创建一个新对象且将其隐式原型指向构造函数原型</span><br>    <span class="hljs-keyword">let</span> obj = &#123;<br>      __proto__ : fun.prototype<br>    &#125;<br>    <span class="hljs-comment">// 执行构造函数</span><br>    fun.call(obj, ...arguments)<br>    <span class="hljs-comment">// 返回该对象</span><br>    <span class="hljs-keyword">return</span> obj<br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">person</span>(<span class="hljs-params">name, age</span>) </span>&#123;<br>  <span class="hljs-built_in">this</span>.name = name<br>  <span class="hljs-built_in">this</span>.age = age<br>&#125;<br><span class="hljs-keyword">let</span> obj = myNew(person)(<span class="hljs-string">&#x27;chen&#x27;</span>, <span class="hljs-number">18</span>) <span class="hljs-comment">// &#123;name: &quot;chen&quot;, age: 18&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="7、实现一个基本的Promise"><a href="#7、实现一个基本的Promise" class="headerlink" title="7、实现一个基本的Promise"></a><strong>7、实现一个基本的Promise</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 未添加异步处理等其他边界情况</span><br><span class="hljs-comment">// ①自动执行函数，②三个状态，③then</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Promise</span> </span>&#123;<br>  <span class="hljs-title">constructor</span> (<span class="hljs-params">fn</span>) &#123;<br>    <span class="hljs-comment">// 三个状态</span><br>    <span class="hljs-built_in">this</span>.state = <span class="hljs-string">&#x27;pending&#x27;</span><br>    <span class="hljs-built_in">this</span>.value = <span class="hljs-literal">undefined</span><br>    <span class="hljs-built_in">this</span>.reason = <span class="hljs-literal">undefined</span><br>    <span class="hljs-keyword">let</span> resolve = <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> &#123;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.state === <span class="hljs-string">&#x27;pending&#x27;</span>) &#123;<br>        <span class="hljs-built_in">this</span>.state = <span class="hljs-string">&#x27;fulfilled&#x27;</span><br>        <span class="hljs-built_in">this</span>.value = value<br>      &#125;<br>    &#125;<br>    <span class="hljs-keyword">let</span> reject = <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> &#123;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.state === <span class="hljs-string">&#x27;pending&#x27;</span>) &#123;<br>        <span class="hljs-built_in">this</span>.state = <span class="hljs-string">&#x27;rejected&#x27;</span><br>        <span class="hljs-built_in">this</span>.reason = value<br>      &#125;<br>    &#125;<br>    <span class="hljs-comment">// 自动执行函数</span><br>    <span class="hljs-keyword">try</span> &#123;<br>      fn(resolve, reject)<br>    &#125; <span class="hljs-keyword">catch</span> (e) &#123;<br>      reject(e)<br>    &#125;<br>  &#125;<br>  <span class="hljs-comment">// then</span><br>  <span class="hljs-function"><span class="hljs-title">then</span>(<span class="hljs-params">onFulfilled, onRejected</span>)</span> &#123;<br>    <span class="hljs-keyword">switch</span> (<span class="hljs-built_in">this</span>.state) &#123;<br>      <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;fulfilled&#x27;</span>:<br>        onFulfilled()<br>        <span class="hljs-keyword">break</span><br>      <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;rejected&#x27;</span>:<br>        onRejected()<br>        <span class="hljs-keyword">break</span><br>      <span class="hljs-keyword">default</span>:<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="8、实现浅拷贝"><a href="#8、实现浅拷贝" class="headerlink" title="8、实现浅拷贝"></a><strong>8、实现浅拷贝</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 1. ...实现</span><br><span class="hljs-keyword">let</span> copy1 = &#123;...&#123;<span class="hljs-attr">x</span>:<span class="hljs-number">1</span>&#125;&#125;<br><br><span class="hljs-comment">// 2. Object.assign实现</span><br><br><span class="hljs-keyword">let</span> copy2 = <span class="hljs-built_in">Object</span>.assign(&#123;&#125;, &#123;<span class="hljs-attr">x</span>:<span class="hljs-number">1</span>&#125;)<br></code></pre></td></tr></table></figure>
+
+<h2 id="9、实现一个基本的深拷贝"><a href="#9、实现一个基本的深拷贝" class="headerlink" title="9、实现一个基本的深拷贝"></a><strong>9、实现一个基本的深拷贝</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 1. JOSN.stringify()/JSON.parse()</span><br><span class="hljs-keyword">let</span> obj = &#123;<span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: &#123;<span class="hljs-attr">x</span>: <span class="hljs-number">3</span>&#125;&#125;<br><span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(obj))<br><br><span class="hljs-comment">// 2. 递归拷贝</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deepClone</span>(<span class="hljs-params">obj</span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> copy = obj <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span> ? [] : &#123;&#125;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> obj) &#123;<br>    <span class="hljs-keyword">if</span> (obj.hasOwnProperty(i)) &#123;<br>      copy[i] = <span class="hljs-keyword">typeof</span> obj[i] === <span class="hljs-string">&#x27;object&#x27;</span> ? deepClone(obj[i]) : obj[i]<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">return</span> copy<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="10、使用setTimeout模拟setInterval"><a href="#10、使用setTimeout模拟setInterval" class="headerlink" title="10、使用setTimeout模拟setInterval"></a><strong>10、使用setTimeout模拟setInterval</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 可避免setInterval因执行时间导致的间隔执行时间不一致</span><br><span class="hljs-built_in">setTimeout</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-comment">// do something</span><br>  <span class="hljs-built_in">setTimeout</span> (<span class="hljs-built_in">arguments</span>.callee, <span class="hljs-number">500</span>)<br>&#125;, <span class="hljs-number">500</span>)<br></code></pre></td></tr></table></figure>
+
+<p><strong>11、js实现一个继承方法// 借用构造函数继承实例属性</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 借用构造函数继承实例属性</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span> (<span class="hljs-params"></span>) </span>&#123;<br>  Parent.call(<span class="hljs-built_in">this</span>)<br>&#125;<br><span class="hljs-comment">// 寄生继承原型属性</span><br>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> Super = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;&#125;<br>  Super.prototype = Parent.prototype<br>  Child.prototype = <span class="hljs-keyword">new</span> Super()<br>&#125;)()<br></code></pre></td></tr></table></figure>
+
+<h2 id="12、实现一个基本的Event-Bus"><a href="#12、实现一个基本的Event-Bus" class="headerlink" title="12、实现一个基本的Event Bus"></a><strong>12、实现一个基本的Event Bus</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 组件通信，一个触发与监听的过程</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EventEmitter</span> </span>&#123;<br>  <span class="hljs-title">constructor</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// 存储事件</span><br>    <span class="hljs-built_in">this</span>.events = <span class="hljs-built_in">this</span>.events || <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>()<br>  &#125;<br>  <span class="hljs-comment">// 监听事件</span><br>  addListener (type, fn) &#123;<br>    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.events.get(type)) &#123;<br>      <span class="hljs-built_in">this</span>.events.set(type, fn)<br>    &#125;<br>  &#125;<br>  <span class="hljs-comment">// 触发事件</span><br>  emit (type) &#123;<br>    <span class="hljs-keyword">let</span> handle = <span class="hljs-built_in">this</span>.events.get(type)<br>    handle.apply(<span class="hljs-built_in">this</span>, [...arguments].slice(<span class="hljs-number">1</span>))<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">// 测试</span><br><span class="hljs-keyword">let</span> emitter = <span class="hljs-keyword">new</span> EventEmitter()<br><span class="hljs-comment">// 监听事件</span><br>emitter.addListener(<span class="hljs-string">&#x27;ages&#x27;</span>, <span class="hljs-function"><span class="hljs-params">age</span> =&gt;</span> &#123;<br>  <span class="hljs-built_in">console</span>.log(age)<br>&#125;)<br><span class="hljs-comment">// 触发事件</span><br>emitter.emit(<span class="hljs-string">&#x27;ages&#x27;</span>, <span class="hljs-number">18</span>)  <span class="hljs-comment">// 18</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="13、实现一个双向数据绑定"><a href="#13、实现一个双向数据绑定" class="headerlink" title="13、实现一个双向数据绑定"></a><strong>13、实现一个双向数据绑定</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> obj = &#123;&#125;<br><span class="hljs-keyword">let</span> input = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;input&#x27;</span>)<br><span class="hljs-keyword">let</span> span = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;span&#x27;</span>)<br><span class="hljs-comment">// 数据劫持</span><br><span class="hljs-built_in">Object</span>.defineProperty(obj, <span class="hljs-string">&#x27;text&#x27;</span>, &#123;<br>  configurable: <span class="hljs-literal">true</span>,<br>  enumerable: <span class="hljs-literal">true</span>,<br>  <span class="hljs-function"><span class="hljs-title">get</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;获取数据了&#x27;</span>)<br>  &#125;,<br>  <span class="hljs-function"><span class="hljs-title">set</span>(<span class="hljs-params">newVal</span>)</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;数据更新了&#x27;</span>)<br>    input.value = newVal<br>    span.innerHTML = newVal<br>  &#125;<br>&#125;)<br><span class="hljs-comment">// 输入监听</span><br>input.addEventListener(<span class="hljs-string">&#x27;keyup&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>&#123;<br>  obj.text = e.target.value<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>完整实现可前往之前写的：这应该是最详细的响应式系统讲解了</p>
+<p><a href="https://link.zhihu.com/?target=https://juejin.im/post/5d26e368e51d4577407b1dd7">https://juejin.im/post/5d26e368e51d4577407b1dd7</a></p>
+<h2 id="14、实现一个简单路由"><a href="#14、实现一个简单路由" class="headerlink" title="14、实现一个简单路由"></a><strong>14、实现一个简单路由</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// hash路由</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Route</span></span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span>&#123;<br>    <span class="hljs-comment">// 路由存储对象</span><br>    <span class="hljs-built_in">this</span>.routes = &#123;&#125;<br>    <span class="hljs-comment">// 当前hash</span><br>    <span class="hljs-built_in">this</span>.currentHash = <span class="hljs-string">&#x27;&#x27;</span><br>    <span class="hljs-comment">// 绑定this，避免监听时this指向改变</span><br>    <span class="hljs-built_in">this</span>.freshRoute = <span class="hljs-built_in">this</span>.freshRoute.bind(<span class="hljs-built_in">this</span>)<br>    <span class="hljs-comment">// 监听</span><br>    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;load&#x27;</span>, <span class="hljs-built_in">this</span>.freshRoute, <span class="hljs-literal">false</span>)<br>    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;hashchange&#x27;</span>, <span class="hljs-built_in">this</span>.freshRoute, <span class="hljs-literal">false</span>)<br>  &#125;<br>  <span class="hljs-comment">// 存储</span><br>  storeRoute (path, cb) &#123;<br>    <span class="hljs-built_in">this</span>.routes[path] = cb || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;&#125;<br>  &#125;<br>  <span class="hljs-comment">// 更新</span><br>  freshRoute () &#123;<br>    <span class="hljs-built_in">this</span>.currentHash = location.hash.slice(<span class="hljs-number">1</span>) || <span class="hljs-string">&#x27;/&#x27;</span><br>    <span class="hljs-built_in">this</span>.routes[<span class="hljs-built_in">this</span>.currentHash]()<br>  &#125;   <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="15、实现懒加载"><a href="#15、实现懒加载" class="headerlink" title="15、实现懒加载"></a><strong>15、实现懒加载</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;ul&gt;<br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/1.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/2.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/3.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/4.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/5.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/6.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/7.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/8.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/9.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>  &lt;li&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./imgs/default.png&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;./imgs/10.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br>&lt;/ul&gt;<br><span class="hljs-keyword">let</span> imgs =  <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;img&#x27;</span>)<br><span class="hljs-comment">// 可视区高度</span><br><span class="hljs-keyword">let</span> clientHeight = <span class="hljs-built_in">window</span>.innerHeight || <span class="hljs-built_in">document</span>.documentElement.clientHeight || <span class="hljs-built_in">document</span>.body.clientHeight<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">lazyLoad</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-comment">// 滚动卷去的高度</span><br>  <span class="hljs-keyword">let</span> scrollTop = <span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop || <span class="hljs-built_in">document</span>.body.scrollTop<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; imgs.length; i ++) &#123;<br>    <span class="hljs-comment">// 图片在可视区冒出的高度</span><br>    <span class="hljs-keyword">let</span> x = clientHeight + scrollTop - imgs[i].offsetTop<br>    <span class="hljs-comment">// 图片在可视区内</span><br>    <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span> &amp;&amp; x &lt; clientHeight+imgs[i].height) &#123;<br>      imgs[i].src = imgs[i].getAttribute(<span class="hljs-string">&#x27;data&#x27;</span>)<br>    &#125; <br>  &#125;      <br>&#125;<br><span class="hljs-comment">// addEventListener(&#x27;scroll&#x27;, lazyLoad) or setInterval(lazyLoad, 1000)</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="16、rem实现原理"><a href="#16、rem实现原理" class="headerlink" title="16、rem实现原理"></a><strong>16、rem实现原理</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 原始配置</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setRem</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> doc = <span class="hljs-built_in">document</span>.documentElement<br>  <span class="hljs-keyword">let</span> width = doc.getBoundingClientRect().width<br>  <span class="hljs-keyword">let</span> rem = width / <span class="hljs-number">75</span><br>  doc.style.fontSize = rem + <span class="hljs-string">&#x27;px&#x27;</span><br>&#125;<br><span class="hljs-comment">// 监听窗口变化</span><br>addEventListener(<span class="hljs-string">&quot;resize&quot;</span>, setRem)<br></code></pre></td></tr></table></figure>
+
+<h2 id="17、手写实现AJAX"><a href="#17、手写实现AJAX" class="headerlink" title="17、手写实现AJAX"></a><strong>17、手写实现AJAX</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 1. 简单流程</span><br><br><span class="hljs-comment">// 实例化</span><br><span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest()<br><span class="hljs-comment">// 初始化</span><br>xhr.open(method, url, <span class="hljs-keyword">async</span>)<br><span class="hljs-comment">// 发送请求</span><br>xhr.send(data)<br><span class="hljs-comment">// 设置状态变化回调处理请求结果</span><br>xhr.onreadystatechange = <span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-keyword">if</span> (xhr.readyStatus === <span class="hljs-number">4</span> &amp;&amp; xhr.status === <span class="hljs-number">200</span>) &#123;<br>    <span class="hljs-built_in">console</span>.log(xhr.responseText)<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">// 2. 基于promise实现 </span><br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ajax</span> (<span class="hljs-params">options</span>) </span>&#123;<br>  <span class="hljs-comment">// 请求地址</span><br>  <span class="hljs-keyword">const</span> url = options.url<br>  <span class="hljs-comment">// 请求方法</span><br>  <span class="hljs-keyword">const</span> method = options.method.toLocaleLowerCase() || <span class="hljs-string">&#x27;get&#x27;</span><br>  <span class="hljs-comment">// 默认为异步true</span><br>  <span class="hljs-keyword">const</span> <span class="hljs-keyword">async</span> = options.async<br>  <span class="hljs-comment">// 请求参数</span><br>  <span class="hljs-keyword">const</span> data = options.data<br>  <span class="hljs-comment">// 实例化</span><br>  <span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest()<br>  <span class="hljs-comment">// 请求超时</span><br>  <span class="hljs-keyword">if</span> (options.timeout &amp;&amp; options.timeout &gt; <span class="hljs-number">0</span>) &#123;<br>    xhr.timeout = options.timeout<br>  &#125;<br>  <span class="hljs-comment">// 返回一个Promise实例</span><br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span> (<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    xhr.ontimeout = <span class="hljs-function">() =&gt;</span> reject &amp;&amp; reject(<span class="hljs-string">&#x27;请求超时&#x27;</span>)<br>    <span class="hljs-comment">// 监听状态变化回调</span><br>    xhr.onreadystatechange = <span class="hljs-function">() =&gt;</span> &#123;<br>      <span class="hljs-keyword">if</span> (xhr.readyState == <span class="hljs-number">4</span>) &#123;<br>        <span class="hljs-comment">// 200-300 之间表示请求成功，304资源未变，取缓存</span><br>        <span class="hljs-keyword">if</span> (xhr.status &gt;= <span class="hljs-number">200</span> &amp;&amp; xhr.status &lt; <span class="hljs-number">300</span> || xhr.status == <span class="hljs-number">304</span>) &#123;<br>          resolve &amp;&amp; resolve(xhr.responseText)<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>          reject &amp;&amp; reject()<br>        &#125;<br>      &#125;<br>    &#125;<br>    <span class="hljs-comment">// 错误回调</span><br>    xhr.onerror = <span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> reject &amp;&amp; reject(err)<br>    <span class="hljs-keyword">let</span> paramArr = []<br>    <span class="hljs-keyword">let</span> encodeData<br>    <span class="hljs-comment">// 处理请求参数</span><br>    <span class="hljs-keyword">if</span> (data <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Object</span>) &#123;<br>      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> data) &#123;<br>        <span class="hljs-comment">// 参数拼接需要通过 encodeURIComponent 进行编码</span><br>        paramArr.push(<span class="hljs-built_in">encodeURIComponent</span>(key) + <span class="hljs-string">&#x27;=&#x27;</span> + <span class="hljs-built_in">encodeURIComponent</span>(data[key]))<br>      &#125;<br>      encodeData = paramArr.join(<span class="hljs-string">&#x27;&amp;&#x27;</span>)<br>    &#125;<br>    <span class="hljs-comment">// get请求拼接参数</span><br>    <span class="hljs-keyword">if</span> (method === <span class="hljs-string">&#x27;get&#x27;</span>) &#123;<br>      <span class="hljs-comment">// 检测url中是否已存在 ? 及其位置</span><br>      <span class="hljs-keyword">const</span> index = url.indexOf(<span class="hljs-string">&#x27;?&#x27;</span>)<br>      <span class="hljs-keyword">if</span> (index === -<span class="hljs-number">1</span>) url += <span class="hljs-string">&#x27;?&#x27;</span><br>      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (index !== url.length -<span class="hljs-number">1</span>) url += <span class="hljs-string">&#x27;&amp;&#x27;</span><br>      <span class="hljs-comment">// 拼接url</span><br>      url += encodeData<br>    &#125;<br>    <span class="hljs-comment">// 初始化</span><br>    xhr.open(method, url, <span class="hljs-keyword">async</span>)<br>    <span class="hljs-comment">// 发送请求</span><br>    <span class="hljs-keyword">if</span> (method === <span class="hljs-string">&#x27;get&#x27;</span>) xhr.send(<span class="hljs-literal">null</span>)<br>    <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-comment">// post 方式需要设置请求头</span><br>      xhr.setRequestHeader(<span class="hljs-string">&#x27;Content-Type&#x27;</span>,<span class="hljs-string">&#x27;application/x-www-form-urlencoded;charset=UTF-8&#x27;</span>)<br>      xhr.send(encodeData)<br>    &#125;<br>  &#125;)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="18、实现拖拽"><a href="#18、实现拖拽" class="headerlink" title="18、实现拖拽"></a><strong>18、实现拖拽</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-comment">// drag处于绝对定位状态</span><br>  <span class="hljs-keyword">let</span> drag = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;box&#x27;</span>)<br>  drag.onmousedown = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>&#123;<br>    <span class="hljs-keyword">var</span> e = e || <span class="hljs-built_in">window</span>.event<br>    <span class="hljs-comment">// 鼠标与拖拽元素边界的距离 = 鼠标与可视区边界的距离 - 拖拽元素与边界的距离</span><br>    <span class="hljs-keyword">let</span> diffX = e.clientX - drag.offsetLeft<br>    <span class="hljs-keyword">let</span> diffY = e.clientY - drag.offsetTop<br>    drag.onmousemove = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>&#123;<br>      <span class="hljs-comment">// 拖拽元素移动的距离 = 鼠标与可视区边界的距离 - 鼠标与拖拽元素边界的距离</span><br>      <span class="hljs-keyword">let</span> left = e.clientX - diffX<br>      <span class="hljs-keyword">let</span> top = e.clientY - diffY<br>      <span class="hljs-comment">// 避免拖拽出可视区</span><br>      <span class="hljs-keyword">if</span> (left &lt; <span class="hljs-number">0</span>) &#123;<br>        left = <span class="hljs-number">0</span><br>      &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (left &gt; <span class="hljs-built_in">window</span>.innerWidth - drag.offsetWidth) &#123;<br>        left = <span class="hljs-built_in">window</span>.innerWidth - drag.offsetWidth<br>      &#125;<br>      <span class="hljs-keyword">if</span> (top &lt; <span class="hljs-number">0</span>) &#123;<br>        top = <span class="hljs-number">0</span><br>      &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (top &gt; <span class="hljs-built_in">window</span>.innerHeight - drag.offsetHeight) &#123;<br>        top = <span class="hljs-built_in">window</span>.innerHeight - drag.offsetHeight<br>      &#125;<br>      drag.style.left = left + <span class="hljs-string">&#x27;px&#x27;</span><br>      drag.style.top = top + <span class="hljs-string">&#x27;px&#x27;</span><br>    &#125;<br>    drag.onmouseup = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>&#123;<br>      <span class="hljs-built_in">this</span>.onmousemove = <span class="hljs-literal">null</span><br>      <span class="hljs-built_in">this</span>.onmouseup = <span class="hljs-literal">null</span><br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="19、实现一个节流函数"><a href="#19、实现一个节流函数" class="headerlink" title="19、实现一个节流函数"></a><strong>19、实现一个节流函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路：在规定时间内只触发一次</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span> (<span class="hljs-params">fn, delay</span>) </span>&#123;<br>  <span class="hljs-comment">// 利用闭包保存时间</span><br>  <span class="hljs-keyword">let</span> prev = <span class="hljs-built_in">Date</span>.now()<br>  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-keyword">let</span> context = <span class="hljs-built_in">this</span><br>    <span class="hljs-keyword">let</span> arg = <span class="hljs-built_in">arguments</span><br>    <span class="hljs-keyword">let</span> now = <span class="hljs-built_in">Date</span>.now()<br>    <span class="hljs-keyword">if</span> (now - prev &gt;= delay) &#123;<br>      fn.apply(context, arg)<br>      prev = <span class="hljs-built_in">Date</span>.now()<br>    &#125;<br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;节流&#x27;</span>)<br>&#125;<br>addEventListener(<span class="hljs-string">&#x27;scroll&#x27;</span>, throttle(fn, <span class="hljs-number">1000</span>)) <br></code></pre></td></tr></table></figure>
+
+<h2 id="20、实现一个防抖函数"><a href="#20、实现一个防抖函数" class="headerlink" title="20、实现一个防抖函数"></a><strong>20、实现一个防抖函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 思路:在规定时间内未触发第二次，则执行</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span> (<span class="hljs-params">fn, delay</span>) </span>&#123;<br>  <span class="hljs-comment">// 利用闭包保存定时器</span><br>  <span class="hljs-keyword">let</span> timer = <span class="hljs-literal">null</span><br>  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-keyword">let</span> context = <span class="hljs-built_in">this</span><br>    <span class="hljs-keyword">let</span> arg = <span class="hljs-built_in">arguments</span><br>    <span class="hljs-comment">// 在规定时间内再次触发会先清除定时器后再重设定时器</span><br>    <span class="hljs-built_in">clearTimeout</span>(timer)<br>    timer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>      fn.apply(context, arg)<br>    &#125;, delay)<br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span> (<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;防抖&#x27;</span>)<br>&#125;<br>addEventListener(<span class="hljs-string">&#x27;scroll&#x27;</span>, debounce(fn, <span class="hljs-number">1000</span>)) <br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>原作者姓名： 陈煜仑<br>原出处：掘金<br>原文链接：<a href="https://link.zhihu.com/?target=https://juejin.im/post/6844903891591495693">20道JS原理题助你面试一臂之力！</a></p>
+</blockquote>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>等来清晨</li>
+    <li><strong>本文链接：</strong><a href="http://workhardjun.com/2020/11/23/javascript/index.html" title="http:&#x2F;&#x2F;workhardjun.com&#x2F;2020&#x2F;11&#x2F;23&#x2F;javascript&#x2F;index.html">http:&#x2F;&#x2F;workhardjun.com&#x2F;2020&#x2F;11&#x2F;23&#x2F;javascript&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        0
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2020/11/21/%E9%A6%96%E6%AC%A1%E5%8F%91%E5%B8%83/">首次发布<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAcall%E5%87%BD%E6%95%B0"><span class="toc-text">1、实现一个call函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAapply%E5%87%BD%E6%95%B0"><span class="toc-text">2、实现一个apply函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAbind%E5%87%BD%E6%95%B0"><span class="toc-text">3、实现一个bind函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81instanceof%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">4、instanceof的原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81Object-create%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">5、Object.create的基本实现原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81new%E6%9C%AC%E8%B4%A8"><span class="toc-text">6、new本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84Promise"><span class="toc-text">7、实现一个基本的Promise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E5%AE%9E%E7%8E%B0%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-text">8、实现浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-text">9、实现一个基本的深拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E4%BD%BF%E7%94%A8setTimeout%E6%A8%A1%E6%8B%9FsetInterval"><span class="toc-text">10、使用setTimeout模拟setInterval</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84Event-Bus"><span class="toc-text">12、实现一个基本的Event Bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A"><span class="toc-text">13、实现一个双向数据绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E8%B7%AF%E7%94%B1"><span class="toc-text">14、实现一个简单路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81%E5%AE%9E%E7%8E%B0%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="toc-text">15、实现懒加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16%E3%80%81rem%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">16、rem实现原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17%E3%80%81%E6%89%8B%E5%86%99%E5%AE%9E%E7%8E%B0AJAX"><span class="toc-text">17、手写实现AJAX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18%E3%80%81%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD"><span class="toc-text">18、实现拖拽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0"><span class="toc-text">19、实现一个节流函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%B2%E6%8A%96%E5%87%BD%E6%95%B0"><span class="toc-text">20、实现一个防抖函数</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/izhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">等来清晨</a>  |   - <a target="_blank" href="https://github.com/sadness-happy/sadness-happy.github.io">GitHub</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
