@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"workhardjun.com","root":"/","images":"/images","scheme":"Pisces","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="1、实现一个call函数123456789101112&#x2F;&#x2F; 思路：将要改变this指向的方法挂到目标this上执行并返回Function.prototype.mycall &#x3D; function (context) &amp;#123;  if (typeof this !&#x3D;&#x3D; &amp;#x27;function&amp;#x27;) &amp;#123;    throw new TypeError(&amp;#x27;not f">
+<meta name="description" content="1、实现一个call函数123456789101112&#x2F;&#x2F; 思路：将要改变this指向的方法挂到目标this上执行并返回Function.prototype.mycall &#x3D; function (context) &amp;#123;  if (typeof this !&#x3D;&#x3D; &amp;#x27;function&amp;#x27;) &amp;#123;    throw new TypeError(&amp;#x27;not fun">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript">
 <meta property="og:url" content="http://workhardjun.com/2020/11/23/javascript/index.html">
 <meta property="og:site_name" content="等来清晨">
-<meta property="og:description" content="1、实现一个call函数123456789101112&#x2F;&#x2F; 思路：将要改变this指向的方法挂到目标this上执行并返回Function.prototype.mycall &#x3D; function (context) &amp;#123;  if (typeof this !&#x3D;&#x3D; &amp;#x27;function&amp;#x27;) &amp;#123;    throw new TypeError(&amp;#x27;not f">
+<meta property="og:description" content="1、实现一个call函数123456789101112&#x2F;&#x2F; 思路：将要改变this指向的方法挂到目标this上执行并返回Function.prototype.mycall &#x3D; function (context) &amp;#123;  if (typeof this !&#x3D;&#x3D; &amp;#x27;function&amp;#x27;) &amp;#123;    throw new TypeError(&amp;#x27;not fun">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-23T01:16:46.000Z">
-<meta property="article:modified_time" content="2020-11-23T03:14:01.243Z">
+<meta property="article:modified_time" content="2020-11-23T06:17:04.181Z">
 <meta property="article:author" content="等来清晨">
 <meta name="twitter:card" content="summary">
 
@@ -226,6 +226,8 @@
 
         <section class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="等来清晨"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">等来清晨</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -239,6 +241,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -298,7 +308,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2020-11-23 09:16:46 / Modified: 11:14:01" itemprop="dateCreated datePublished" datetime="2020-11-23T09:16:46+08:00">2020-11-23</time>
+      <time title="Created: 2020-11-23 09:16:46 / Modified: 14:17:04" itemprop="dateCreated datePublished" datetime="2020-11-23T09:16:46+08:00">2020-11-23</time>
     </span>
 
   
@@ -311,11 +321,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <a id="more"></a>
-
-<h2 id="1、实现一个call函数"><a href="#1、实现一个call函数" class="headerlink" title="1、实现一个call函数"></a><strong>1、实现一个call函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路：将要改变this指向的方法挂到目标this上执行并返回</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.mycall = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&#x27;not funciton&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  context = context || <span class="built_in">window</span></span><br><span class="line">  context.fn = <span class="built_in">this</span></span><br><span class="line">  <span class="keyword">let</span> arg = [...arguments].slice(<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">let</span> result = context.fn(...arg)</span><br><span class="line">  <span class="keyword">delete</span> context.fn</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+        <h2 id="1、实现一个call函数"><a href="#1、实现一个call函数" class="headerlink" title="1、实现一个call函数"></a><strong>1、实现一个call函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路：将要改变this指向的方法挂到目标this上执行并返回</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.mycall = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&#x27;not funciton&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  context = context || <span class="built_in">window</span></span><br><span class="line">  context.fn = <span class="built_in">this</span></span><br><span class="line">  <span class="keyword">let</span> arg = [...arguments].slice(<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">let</span> result = context.fn(...arg)</span><br><span class="line">  <span class="keyword">delete</span> context.fn</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
 <h2 id="2、实现一个apply函数"><a href="#2、实现一个apply函数" class="headerlink" title="2、实现一个apply函数"></a><strong>2、实现一个apply函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路：将要改变this指向的方法挂到目标this上执行并返回</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.myapply = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&#x27;not funciton&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  context = context || <span class="built_in">window</span></span><br><span class="line">  context.fn = <span class="built_in">this</span></span><br><span class="line">  <span class="keyword">let</span> result</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">arguments</span>[<span class="number">1</span>]) &#123;</span><br><span class="line">    result = context.fn(...arguments[<span class="number">1</span>])</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result = context.fn()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">delete</span> context.fn</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h2 id="3、实现一个bind函数"><a href="#3、实现一个bind函数" class="headerlink" title="3、实现一个bind函数"></a><strong>3、实现一个bind函数</strong></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路：类似call，但返回的是函数</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.mybind = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&#x27;Error&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> _this = <span class="built_in">this</span></span><br><span class="line">  <span class="keyword">let</span> arg = [...arguments].slice(<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 处理函数使用new的情况</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span> <span class="keyword">instanceof</span> F) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> _this(...arg, ...arguments)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> _this.apply(context, arg.concat(...arguments))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
