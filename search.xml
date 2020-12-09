@@ -65,4 +65,2434 @@
 <h3 id="潦草收场"><a href="#潦草收场" class="headerlink" title="潦草收场"></a>潦草收场</h3><p>本来在新的博客搭建好之后这是发第一篇博文，满怀期待的想写一些东西。但是缺乏文采，不知道说些什么，以后会写一些专业的东西给大家，供大家一起交流学习。</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>javascript</title>
+    <url>/2019/11/23/JavaScript%E9%AB%98%E7%BA%A7/</url>
+    <content><![CDATA[<h1 id="JavaScript高级"><a href="#JavaScript高级" class="headerlink" title="JavaScript高级"></a>JavaScript高级</h1><a id="more"></a>
+
+<p>HTML页面是静态的，而JavaScript可以弥补HTML语言的缺陷，实现Web页面客户端的动态效果。JavaScript的作用有以下几点：</p>
+<h3 id="1、动态改变页面内容"><a href="#1、动态改变页面内容" class="headerlink" title="1、动态改变页面内容"></a>1、动态改变页面内容</h3><p>HTML页面是静态的，一旦编写，内容是无法改变的。JavaScript可以弥补这个不足，可以将内容动态地显示在网页中。</p>
+<h3 id="2、动态改变网页的外观"><a href="#2、动态改变网页的外观" class="headerlink" title="2、动态改变网页的外观"></a>2、动态改变网页的外观</h3><p>JavaScript通过修改网页元素的CSS样式，达到动态地改变网页的外观。</p>
+<h3 id="3、验证表单数据"><a href="#3、验证表单数据" class="headerlink" title="3、验证表单数据"></a>3、验证表单数据</h3><p>我们常见的在各大网站中的注册中的验证功能，就是JavaScript实现的。</p>
+<h3 id="4、响应事件"><a href="#4、响应事件" class="headerlink" title="4、响应事件"></a>4、响应事件</h3><p>JavaScript是基于事件的语言。例如点击一个按钮弹出一个对话框，就是鼠标点击触发的事件，例如绿叶学习网教程文章中的点赞效果：</p>
+<p>对于JavaScript的理解，就一句话：如果没有使用JavaScript，网页就是静态的，唯一的功能就是给用户浏览。加入了JavaScript，网页变得绚丽多彩起来。</p>
+<h1 id="三、内容"><a href="#三、内容" class="headerlink" title="三、内容"></a>三、内容</h1><h2 id="1、数组对象"><a href="#1、数组对象" class="headerlink" title="1、数组对象"></a>1、数组对象</h2><h3 id="一、数组基础"><a href="#一、数组基础" class="headerlink" title="一、数组基础"></a>一、数组基础</h3><p><strong>1、数组是什么？</strong></p>
+<p>在JavaScript中，我们可以使用“数组”来存储一组“相同数据类型”的数据结构。</p>
+<p><strong>2、创建数组</strong></p>
+<p>在JavaScript中，创建数组共有3种方法：</p>
+<p>（1）新建一个长度为0的数组</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>myArr = ``new</code> <code>Array();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（2）新建长度为n的数组</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234</th>
+<th><code>var</code> <code>myArr = ``new</code> <code>Array(3);``myArr[0]=``&quot;HTML&quot;``;``myArr[1]=``&quot;CSS&quot;``;``myArr[2]=``&quot;JavaScript&quot;``;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（3）新建指定长度的数组，并赋值</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>myArr = ``new</code> <code>Array(1,2,3,4);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>注意，在JavaScript中，数组的索引是从0开始的，而不是从1开始的。</p>
+<p><strong>3、数组元素的赋值与获取</strong></p>
+<p>在JavaScript中，数组元素的赋值与获取都是通过数组下标来实现。</p>
+<h3 id="二、数组的属性和方法"><a href="#二、数组的属性和方法" class="headerlink" title="二、数组的属性和方法"></a>二、数组的属性和方法</h3><p><strong>1、数组的属性</strong></p>
+<p>在Array对象中有3个属性，分别是length、constructor和prototype。在初学者阶段，我们仅仅掌握length这个属性就可以了。</p>
+<p><strong>2、数组的方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">slice()</td>
+<td align="left">获取数组中的某段数组元素</td>
+</tr>
+<tr>
+<td align="left">unshift()</td>
+<td align="left">在数组开头添加元素</td>
+</tr>
+<tr>
+<td align="left">push()</td>
+<td align="left">在数组末尾添加元素</td>
+</tr>
+<tr>
+<td align="left">shift()</td>
+<td align="left">删除数组中第一个元素</td>
+</tr>
+<tr>
+<td align="left">pop()</td>
+<td align="left">删除数组最后一个元素</td>
+</tr>
+<tr>
+<td align="left">toString()</td>
+<td align="left">将数组转换为字符串</td>
+</tr>
+<tr>
+<td align="left">join()</td>
+<td align="left">将数组元素连接成字符串</td>
+</tr>
+<tr>
+<td align="left">concat()</td>
+<td align="left">多个数组连接为字符串</td>
+</tr>
+<tr>
+<td align="left">sort()</td>
+<td align="left">数组元素正向排序</td>
+</tr>
+<tr>
+<td align="left">reverse()</td>
+<td align="left">数组元素反向排序</td>
+</tr>
+</tbody></table>
+<h2 id="2、数值对象"><a href="#2、数值对象" class="headerlink" title="2、数值对象"></a>2、数值对象</h2><p>下面都是这一章所讲解到的Math对象比较重要的方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">max(x,y)</td>
+<td align="left">返回x和y中的最大值</td>
+</tr>
+<tr>
+<td align="left">min(x,y)</td>
+<td align="left">返回x和y中的最小值</td>
+</tr>
+<tr>
+<td align="left">pow(x,y)</td>
+<td align="left">返回x的y次幂</td>
+</tr>
+<tr>
+<td align="left">abs(x)</td>
+<td align="left">返回数的绝对值</td>
+</tr>
+<tr>
+<td align="left">round(x)</td>
+<td align="left">把数四舍五入为最接近的整数</td>
+</tr>
+<tr>
+<td align="left">random()</td>
+<td align="left">返回0~1之间的随机数</td>
+</tr>
+<tr>
+<td align="left">ceil(x)</td>
+<td align="left">对一个数进行上舍入</td>
+</tr>
+<tr>
+<td align="left">floor(x)</td>
+<td align="left">对一个数进行下舍入</td>
+</tr>
+</tbody></table>
+<h2 id="3、窗口对象"><a href="#3、窗口对象" class="headerlink" title="3、窗口对象"></a>3、窗口对象</h2><p>现在大家都知道了，假如我们要学习一个“XXX对象”，那肯定学习它的属性和方法。window对象也是同样的道理。</p>
+<p>关于window对象的属性很多，但是我们在<a href="http://www.lvyestudy.com/les_js/js_list.aspx">JavaScript入门</a>阶段一个都用不着！所以这一章大家只需要认真掌握window对象的方法即可。</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">open()、close()</td>
+<td align="left">打开窗口、关闭窗口</td>
+</tr>
+<tr>
+<td align="left">resizeBy()、resizeTo()</td>
+<td align="left">改变窗口大小</td>
+</tr>
+<tr>
+<td align="left">moveBy()、moveTo()</td>
+<td align="left">移动窗口</td>
+</tr>
+<tr>
+<td align="left">setTimeout()、clearTimeout()</td>
+<td align="left">设置或取消“一次性”执行的定时器</td>
+</tr>
+<tr>
+<td align="left">setInterval()、clearInterval()</td>
+<td align="left">设置或取消“重复性”执行的定时器</td>
+</tr>
+</tbody></table>
+<h3 id="一、窗口对象简介"><a href="#一、窗口对象简介" class="headerlink" title="一、窗口对象简介"></a>一、窗口对象简介</h3><p>之前几个章节都是JavaScript的基础部分，大家要真想掌握JavaScript，就必须得把基础给打扎实。这一章我们进入JavaScript的核心技术，其实核心技术部分也是比较简单的，大家不要一看到就退缩。</p>
+<p>在之前我们接触过很多JavaScript对象，例如什么<a href="http://www.lvyestudy.com/les_js/js_8.1.aspx">数组对象Array</a>、<a href="http://www.lvyestudy.com/les_js/js_7.1.aspx">日期对象Date</a>等。.这一章我们来学习JavaScript最核心的对象之一：window对象。</p>
+<p>在JavaScript中，一个浏览器窗口就是一个window对象。window对象主要用来控制由窗口弹出的对话框、打开窗口或关闭窗口、控制窗口的大小和位置等等。一句话，window对象就是用来操作“浏览器窗口”的一个对象。</p>
+<p><strong>1、window对象属性</strong></p>
+<p>市面上很多教程在讲解window、document等对象时，不管是常用的还是不常用的属性和方法，先一上来就帮你全部列出来，读者看得头都大。其实在JavaScript入门阶段，对于window对象的属性和方法，我们只需要掌握一些常用的就行，其他需要深入的我们在JavaScript进阶再给大家详细探讨。</p>
+<p>关于window对象的属性很多，但是我们在<a href="http://www.lvyestudy.com/les_js/js_list.aspx">JavaScript入门教程</a>阶段一个都用不着！所以这一章大家只需要认真掌握window对象的方法即可。</p>
+<p><strong>2、window对象方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">open()、close()</td>
+<td align="left">打开窗口、关闭窗口</td>
+</tr>
+<tr>
+<td align="left">resizeBy()、resizeTo()</td>
+<td align="left">改变窗口大小</td>
+</tr>
+<tr>
+<td align="left">moveBy()、moveTo()</td>
+<td align="left">移动窗口</td>
+</tr>
+<tr>
+<td align="left">setTimeout()、clearTimeout()</td>
+<td align="left">设置或取消“一次性”执行的定时器</td>
+</tr>
+<tr>
+<td align="left">setInterval()、clearInterval()</td>
+<td align="left">设置或取消“重复性”执行的定时器</td>
+</tr>
+</tbody></table>
+<p>上面，我把window对象属性去掉，并且筛选出最常用的方法。在JavaScript入门之时，只需要掌握这些就已经足够我们走很远了。</p>
+<h3 id="二、打开和关闭窗口"><a href="#二、打开和关闭窗口" class="headerlink" title="二、打开和关闭窗口"></a>二、打开和关闭窗口</h3><p>在JavaScript中，打开和关闭新的窗口，这是很常见的一种操作。</p>
+<p>在绿叶学习网的JavaScript在线测试工具中，当点击“调试代码”按钮时，就会打开一个新的窗口，并把HTML文档输出到新的页面中去。这里面涉及的方法，就是这一节我们要说到的“使用JavaScript打开和关闭窗口”。</p>
+<p><strong>1、JavaScript打开窗口</strong></p>
+<p>在JavaScript中，我们可以使用window对象中的open()方法来打开一个新窗口。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(URL, 窗口名称, 参数);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>URL：指的是打开窗口的地址，如果URL为空字符串，则浏览器打开一个空白窗口，并且可以使用document.write()方法动态输出HTML文档。</p>
+<p>窗口名称：指的是window对象的名称，可以是a标签或form标签中target属性值。如果指定的名称是一个已经存在的窗口名称，则返回对该窗口的引用，而不会再新打开一个窗口。</p>
+<p>参数：对打开的窗口进行属性设置。</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">top</td>
+<td align="left">窗口顶部距离屏幕顶部的距离，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">left</td>
+<td align="left">窗口左边距离屏幕左边的距离，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">窗口的宽度，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">窗口的高度，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">scrollbars</td>
+<td align="left">是否显示滚动条</td>
+</tr>
+<tr>
+<td align="left">resizable</td>
+<td align="left">窗口大小是否固定</td>
+</tr>
+<tr>
+<td align="left">toolbar</td>
+<td align="left">浏览器工具条，包括前进或后退按钮</td>
+</tr>
+<tr>
+<td align="left">menubar</td>
+<td align="left">菜单条，一般包括文件、编辑及其它一些条目</td>
+</tr>
+<tr>
+<td align="left">location</td>
+<td align="left">地址栏，是可以输入URL的浏览器文本区</td>
+</tr>
+<tr>
+<td align="left">location</td>
+<td align="left">地址栏，是可以输入URL的浏览器文本区</td>
+</tr>
+</tbody></table>
+<p>这些可选参数都不是那么常用，大家不记住也没啥关系，以后需要的时候回到这里查询一下就OK了。</p>
+<p>下面举几个常用的窗口打开的例子：</p>
+<p>（1）打开一个新窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com&quot;``,``&quot;&quot;``,``&quot;&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>上面是打开一个新窗口，并且在新窗口加载绿叶学习网首页。</p>
+<p>（2）打开一个指定位置的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;top=200,left=200&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（3）打开一个指定大小的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;width=200,height=200&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（4）打开一个固定大小的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;width=200,height=200,resizable&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（5）打开一个显示滚动条的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;width=200,height=200,scrollbars&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>openWindow() &#123;``      ``window.open(``&quot;http://www.lvyestudy.com &quot;``, ``&quot;&quot;``, ``&quot;width=200,height=200,resizable&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input id=``&quot;btn&quot;</code> <code>type=``&quot;button&quot;</code> <code>value=``&quot;打开窗口&quot;</code> <code>onclick=``&quot;openWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMS5wbmc?x-oss-process=image/format,png" alt="JavaScript打开窗口"></p>
+<p>分析：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMi5wbmc?x-oss-process=image/format,png" alt="JavaScript window.open()"></p>
+<p>此外还需要注意一点，window.open()方法中的参数width和height设置的时候是不需要加单位（px）的，浏览器默认就已经给我们添加单位。</p>
+<p><strong>2、JavaScript关闭窗口</strong></p>
+<p>在JavaScript中，我们可以使用window对象中的close()方法来关闭一个窗口。</p>
+<p>（1）、关闭当前窗口</p>
+<p>在JavaScript中，如果想要关闭当前的窗口，有3种方式：</p>
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th><code>window.close();``close();``this``.close();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（2）、关闭子窗口</p>
+<p>所谓的“关闭子窗口”就是关闭之前使用window.open()方法动态创建的子窗口。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>窗口名.close();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>使用window.open()方法动态创建的窗口时，我们可以将窗口以变量形式保存，然后再使用close()方法关闭动态创建的窗口。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>newWindow = window.open(``&quot;http://www.lvyestudy.com&quot;``,``&quot;&quot;``,``&quot;width=200,height=200&quot;``);``    ``function</code> <code>closeWindow()``    ``&#123;``      ``newWindow.close();``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;关闭窗口&quot;</code> <code>onclick=``&quot;closeWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMy5wbmc?x-oss-process=image/format,png" alt="JavaScript关闭窗口">父窗口</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItNC5wbmc?x-oss-process=image/format,png" alt="JavaScript window.close()">子窗口</p>
+<p>分析：</p>
+<p>你会看到，浏览器会打开2个窗口。当我们点击“关闭窗口”按钮后，被打开的“子窗口”就会被关闭。</p>
+<h3 id="三、改变窗口大小"><a href="#三、改变窗口大小" class="headerlink" title="三、改变窗口大小"></a>三、改变窗口大小</h3><p>在JavaScript中，可以使用window对象的resizeTo()方法或resizeBy()方法来改变窗口的大小。</p>
+<p><strong>1、resizeTo()方法</strong></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.resizeTo(x, y)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>x表示改变后的水平宽度，y表示改变后的垂直高度。x和y的单位都是px，浏览器自带单位，我们只需要使用数值即可。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>resizeWindow()``    ``&#123;``      ``window.resizeTo(200,200);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;改变大小&quot;</code> <code>onclick=``&quot;resizeWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTMtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript resizeTo()方法"></p>
+<p>分析：</p>
+<p>当我们点击“改变大小”按钮之后，当前窗口的的宽度为200px，而高度变为200px。注意resizeTo(x,y)方法中的x和y是不需要加px作为单位的，因为浏览器默认已经带有px作为单位。</p>
+<p><strong>2、resizeBy()方法</strong></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.resizeBy(x, y)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>当x、y的值大于0时为扩大，小于0时为缩小。其中x和y的单位都是px。</p>
+<p>x表示窗口水平方向每次扩大或缩小的数值，y表示垂直方向窗口每次扩大或缩小的数值。</p>
+<p>resizeTo(x,y)与resizeBy(x,y)不同在于：resizeTo(x,y)中的x、y是“改变后”的数值，而resizeBy(x,y)中的x、y是“增加或减少”的数值。“to”表示一个结果，“by”表示一个过程，大家好好琢磨“to”和“by”的英文含义就懂了。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415161718</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>resizeToWindow() &#123;``      ``window.resizeTo(200,200);``    ``&#125;``    ``function</code> <code>resizeByWindow() &#123;``      ``window.resizeBy(50,50);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;resizeTo&quot;</code> <code>onclick=``&quot;resizeToWindow()&quot;``/&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;resizeBy&quot;</code> <code>onclick=``&quot;resizeByWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTMtMi5wbmc?x-oss-process=image/format,png" alt="JavaScript resizeBy()方法"></p>
+<p>分析：</p>
+<p>我们首先点击“resizeTo”按钮把当前窗口宽度设置为200px，而高度也设置为200px。然后每当我们点击1次“resizeBy”按钮，我们会发现当前窗口的宽度和高度都会增加50px。这样都是由于window.resizeBy(50,50)的结果。</p>
+<h3 id="四、窗口历史"><a href="#四、窗口历史" class="headerlink" title="四、窗口历史"></a>四、窗口历史</h3><p>平常在使用浏览器当中，我们都会经常使用浏览器中的“前进”和“后退”。其实浏览器都会帮我们保存浏览的历史（即窗口历史）。那么在JavaScript中，我们该如何来操作这些窗口历史呢？</p>
+<p>在JavaScript中，我们使用window对象中的history对象进行访问窗口历史。很多人对“window对象中的history对象”这一句不太理解，其实“对象里面也可以有子对象”的。看过JSON教程的读者都知道，我们可以在一个对象里面再定义一个子对象。</p>
+<p>我们在JavaScript进阶教程的“JavaScript对象”这一节再详细为大家探讨。</p>
+<p>既然提到对象，那肯定少不了还是按照“对象的属性”和“对象的方法”这两个套路来给大家讲解了。</p>
+<p><strong>1、history对象属性</strong></p>
+<p>在JavaScript中，hisotry对象常用的属性如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">current</td>
+<td align="left">当前窗口的URL</td>
+</tr>
+<tr>
+<td align="left">next</td>
+<td align="left">历史列表中的下一个URL</td>
+</tr>
+<tr>
+<td align="left">previous</td>
+<td align="left">历史列表中的前一个URL</td>
+</tr>
+<tr>
+<td align="left">length</td>
+<td align="left">历史列表的长度，用于判断列表中的入口数目</td>
+</tr>
+</tbody></table>
+<p>这些history对象属性比较少用，大家看一下就可以了。</p>
+<p><strong>2、history对象方法</strong></p>
+<p>在JavaScript中，hisotry对象常用的方法如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">go()</td>
+<td align="left">进入指定的网页</td>
+</tr>
+<tr>
+<td align="left">back()</td>
+<td align="left">返回上一页</td>
+</tr>
+<tr>
+<td align="left">forward()</td>
+<td align="left">进入下一页</td>
+</tr>
+</tbody></table>
+<p>我们常见的“上一页”与“下一页”实现代码如下：</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.forward();&quot;``&gt;下一页&lt;/a&gt;``&lt;a href=``&quot;javascript:window.history.back();&quot;``&gt;上一页&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>注意一下，这种“上一页”与“下一页”是针对浏览器历史记录而言，不能用来制作类似绿叶学习网那种分页特效。两者是完全不同的概念！</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTUtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript窗口历史">分页效果</p>
+<p>当然，我们还可以使用hisotry.go()方法指定要访问的历史记录。若参数为正数，则向前移动；若参数为负数，则向后移动，例如：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.go(-1);&quot;``&gt;向后退1次&lt;/a&gt;``&lt;a href=``&quot;javascript:window.history.back(2);&quot;``&gt;向后前进2次&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>使用history.length属性能够访问history数组的长度，可以很容易地转移到列表的末尾，例如：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.length-1;&quot;``&gt;末尾&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在JavaScript中，操作窗口历史语法很简单，也不是那么常用。一般情况下，在404页面中，为了用户体验，往往会有一个提供“返回上一页”的选项，这其中就用到了下面这种语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.go(-1);&quot;``&gt;返回上一页&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>由于窗口历史必须在实际环境才会有效，即使提供在线测试也不会有效果，请大家自行在本地测试。</p>
+<h3 id="五、定时器"><a href="#五、定时器" class="headerlink" title="五、定时器"></a>五、定时器</h3><p>什么叫定时器？我们可以看到绿叶学习网首页有一个“图片轮播”特效，每隔2s图片变换一次，这里就用到了定时器。啊，定时器，太重要了！天塌下来，大家都要扛着把它学会先。</p>
+<p>定时器用途非常广，在图片轮播、在线时钟、弹窗广告等地方大显身手。凡是自动执行的东西，很大可能都是跟定时器有关。</p>
+<p>在JavaScript中，关于定时器的实现，我们有2组方法：</p>
+<ul>
+<li>（1）setTimeout()和clearTimeout()；</li>
+<li>（2）setInterval()和clearInterval()；</li>
+</ul>
+<p>这一节的例子使用“在线测试”不会有效果，请大家自行把代码复制到本地编辑器进行测试预览。下面我们详细分析这2组方法的用法与不同。</p>
+<p><strong>1、setTimeout()和clearTimeout()</strong></p>
+<p>在JavaScript中，我们可以使用setTimeout()方法来设置“一次性”调用的函数。其中clearTimeout()可以用来取消执行setTimeout()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>变量名 = setTimeout(code , time);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数code可以是一段代码，也可以是一个调用的函数名；</p>
+<p>参数time表示时间，表示要过多长时间才执行code中的内容，单位为毫秒。</p>
+<p>举例：参数code是一段代码</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``window.onload = ``function</code> <code>() &#123;``      ``setTimeout(``&quot;alert(&#39;欢迎来到绿叶学习网&#39;);&quot;``, 2000);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;2秒后提示欢迎语。&lt;/p&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMS5wbmc?x-oss-process=image/format,png" alt="setTimeout()和clearTimeout()"></p>
+<p>分析：</p>
+<p>打开页面2秒后，浏览器会弹出欢迎语。由于setTimeout()方法只会执行一次，所以只会弹出一次对话框。弹出对话框如下图：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMi5wbmc?x-oss-process=image/format,png" alt="JavaScript定时器"></p>
+<p>举例2：参数code是一个函数名</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``window.onload = ``function</code> <code>() &#123;``      ``setTimeout(``&quot;welcome()&quot;``, 2000);``    ``&#125;``    ``function</code> <code>welcome() &#123;``      ``alert(``&quot;欢迎来到绿叶学习网&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;2秒后提示欢迎语。&lt;/p&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMy5wbmc?x-oss-process=image/format,png" alt="JavaScript setTimeout()和clearTimeout()"></p>
+<p>分析：</p>
+<p>举例1和举例2实际效果是相同的，只不过参数code不一样罢了。</p>
+<p><strong>2、setInterval()和clearInterval()</strong></p>
+<p>在JavaScript中，我们可以使用setInterval()方法来设置“重复性”调用的函数。其中clearInterval()可以用来取消执行setTimeout()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>变量名 = setInterval (code , time);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数code可以是一段代码，也可以是一个调用的函数名；</p>
+<p>参数time表示时间，表示要过多长时间才执行code中的内容，单位为毫秒。</p>
+<p>setTimeout()方法与setInterval()方法的语法很相似，实际上这两者在用法方面区别非常大。其中setTimeout()方法内的代码只会执行一次，而setInterval()方法内的代码会重复性执行，除非你使用clearInterval()方法来取消执行。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516171819202122232425</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义全局变量，用于记录秒数``    ``var</code> <code>n = 5;``    ``window.onload = ``function</code> <code>() &#123;``      ``//设置定时器，重复执行函数countDown()``      ``var</code> <code>t = setInterval(``&quot;countDown()&quot;``, 1000);``    ``&#125;``    ``//定义函数``    ``function</code> <code>countDown() &#123;``      ``//判断n是否大于0，因为倒计时不可能有负数``      ``if</code> <code>(n &gt; 0)&#123;``        ``n--;``        ``document.getElementById(``&quot;num&quot;``).innerHTML = n;``      ``&#125;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;新年倒计时：&lt;span id=``&quot;num&quot;``&gt;5&lt;/span&gt;&lt;/p&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtNC5wbmc?x-oss-process=image/format,png" alt="setInterval()和clearInterval()"></p>
+<p>分析：</p>
+<p>window.onload表示在页面加载完毕执行，在“<a href="http://www.lvyestudy.com/les_js/js_14.7.aspx">JavaScript页面相关事件</a>”我们会详细讲解到。</p>
+<p>setInterval()方法会重复执行某一段代码或函数。如果这个例子使用setTimeout方法就不能实现了，因为setTimeout()方法只会执行一次，而setInterval()会重复执行。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516171819202122232425262728293031323334</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义全局变量，用于记录秒数``    ``var</code> <code>n = 0;``    ``window.onload = ``function</code> <code>() &#123;``      ``//设置定时器，重复执行函数add()``      ``var</code> <code>t = setInterval(``&quot;add()&quot;``, 1000);``      ``//点击“暂停”按钮事件``      ``document.getElementById(``&quot;btn_pause&quot;``).onclick = ``function</code> <code>() &#123;``        ``clearInterval(t);``      ``&#125;``      ``//点击“继续”按钮事件``      ``document.getElementById(``&quot;btn_continue&quot;``).onclick = ``function</code> <code>() &#123;``        ``if</code> <code>(confirm(``&quot;你还要继续装逼？&quot;``))&#123;``          ``t = setInterval(``&quot;add()&quot;``, 1000);``        ``&#125;``      ``&#125;``    ``&#125;``    ``//定义计时函数``    ``function</code> <code>add() &#123;``      ``n++;``      ``document.getElementById(``&quot;num&quot;``).innerHTML = n;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;你已经装了&lt;span id=``&quot;num&quot;``&gt;0&lt;/span&gt;秒的“逼”，赶紧暂停吧！&lt;/p&gt;``  ``&lt;input id=``&quot;btn_pause&quot;</code> <code>value=``&quot;暂停&quot;</code> <code>type=``&quot;button&quot;``/&gt;``  ``&lt;input id=``&quot;btn_continue&quot;</code> <code>value=``&quot;继续&quot;</code> <code>type=``&quot;button&quot;</code> <code>/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtNS5wbmc?x-oss-process=image/format,png" alt="JavaScript setInterval()和clearInterval()"></p>
+<p>分析：</p>
+<p>这里我做了一个小程序，其中使用setInterval()方法重复执行计时函数，并且利用按钮点击事件配合clearInterval()方法来进行“暂停”。</p>
+<p>对于初学者来说，这个程序可能有点复杂，涉及了JavaScript对话框、DOM操作和JavaScript事件。请大家学习了后续课程再来看看。</p>
+<p>这一节，我们把定时器的语法简单给大家做个介绍，在后面课程或者以后开发中，你们会经常见到定时器的身影。</p>
+<p><em></em>总结</p>
+<p>1、在JavaScript中，关于定时器的实现，我们有2组方法：</p>
+<ul>
+<li>（1）setTimeout()和clearTimeout()；</li>
+<li>（2）setInterval()和clearInterval()；</li>
+</ul>
+<p>2、setTimeout()方法内的代码只会执行一次，而setInterval()方法内的代码会重复性执行。</p>
+<h2 id="4、JavaScript对话框"><a href="#4、JavaScript对话框" class="headerlink" title="4、JavaScript对话框"></a>4、JavaScript对话框</h2><p>在JavaScript中，对话框共有3种，这3种对话框分别使用以下3种方法定义：</p>
+<ul>
+<li>（1）alert()；</li>
+<li>（2）confirm()；</li>
+<li>（3）prompt()；</li>
+</ul>
+<p>其中前两种用得比较多，最后一种在实际开发中用得比较少。</p>
+<h3 id="一、alert"><a href="#一、alert" class="headerlink" title="一、alert()"></a>一、alert()</h3><p>在JavaScript中，我们可以使用<a href="http://www.lvyestudy.com/les_js/js_10.1.aspx">window对象</a>中的<a href="http://www.lvyestudy.com/les_js/js_11.2.aspx">alert()方法</a>来弹出一个提示框。该对话框效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript alert()方法"></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>alert(message)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>该对话框只是用于提示，并不能对JavaScript脚本产生任何影响。message是必选参数，即提示框的信息，这是一个字符串。alert()方法没有返回值。</p>
+<h3 id="二、confirm"><a href="#二、confirm" class="headerlink" title="二、confirm()"></a>二、confirm()</h3><p>在JavaScript中，<a href="http://www.lvyestudy.com/les_js/js_11.3.aspx">confirm()方法</a>对话框一般用于确认信息，它只有一个参数，返回值为true或false。该对话框效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMi5wbmc?x-oss-process=image/format,png" alt="JavaScript confirm()方法"></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>confirm(message)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>message是必选项，表示弹出对话框中的文本，这是一个字符串。如果用户点击“确定”，则confirm()返回true。如果用户点击“取消”按钮，则confirm()返回false。confirm()方法往往都是和按钮结合使用。</p>
+<h3 id="三、prompt"><a href="#三、prompt" class="headerlink" title="三、prompt()"></a>三、prompt()</h3><p>在JavaScript中，prompt()方法对话框用于输入并返回用户输入的字符串。该对话框效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMy5wbmc?x-oss-process=image/format,png" alt="JavaScript prompt()方法"></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>prompt(message);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数message表示对话框提示内容，这是一个字符串。</p>
+<p><em></em>总结</p>
+<p>1、这3种对话框特点如下：</p>
+<p>（1）alert()：仅有提示文字，没有返回值；</p>
+<p>（2）confirm()：具有提示文字，返回“布尔值”（true或false）；</p>
+<p>（3）prompt()：具有提示文字，返回“字符串”；</p>
+<h2 id="5、文档对象"><a href="#5、文档对象" class="headerlink" title="5、文档对象"></a>5、文档对象</h2><h3 id="一、document对象简介"><a href="#一、document对象简介" class="headerlink" title="一、document对象简介"></a>一、document对象简介</h3><p>前两章，我们已经把window对象详细给大家探讨了一遍。这次我们介绍另一个网页中核心的对象：“document对象”。注意，document对象是window对象中的子对象。</p>
+<p>谈到document对象，其实我们在之前的课程中已经接触很多次了。还记得document.write()吗？这就是document对象的一个方法。</p>
+<p>document对象除了write()方法外，跟其他对象一样，也有自身一套属性和方法。</p>
+<p>document对象，即文档对象。顾名思义，其实很好理解，文档对象嘛，操作的都是HTML文档。为了更好理解什么叫“HTML文档”，请看一下<a href="http://www.lvyestudy.com/les_cj/css_list.aspx">CSS入门教程</a>中“<a href="http://www.lvyestudy.com/les_cj/cj_12.1.aspx">正常文档流</a>”这一节。</p>
+<p><strong>1、document对象属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left">文档标题，即title标签内容</td>
+</tr>
+<tr>
+<td align="left">URL</td>
+<td align="left">文档地址</td>
+</tr>
+<tr>
+<td align="left">fileCreateDate</td>
+<td align="left">文档创建日期</td>
+</tr>
+<tr>
+<td align="left">fileModifiedDate</td>
+<td align="left">文档修改时间（精确到天）</td>
+</tr>
+<tr>
+<td align="left">lastModified</td>
+<td align="left">文档修改时间（精确到秒）</td>
+</tr>
+<tr>
+<td align="left">fileSize</td>
+<td align="left">文档大小</td>
+</tr>
+<tr>
+<td align="left">fgColor</td>
+<td align="left">定义文档的前景色</td>
+</tr>
+<tr>
+<td align="left">bgColor</td>
+<td align="left">定义文档的背景色</td>
+</tr>
+<tr>
+<td align="left">linkColor</td>
+<td align="left">定义“未访问”的超链接颜色</td>
+</tr>
+<tr>
+<td align="left">alinkColor</td>
+<td align="left">定义“被激活”的超链接颜色</td>
+</tr>
+<tr>
+<td align="left">vlinkColor</td>
+<td align="left">定义“访问过”的超链接颜色</td>
+</tr>
+</tbody></table>
+<p><strong>2、document对象方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">document.write()</td>
+<td align="left">输入文本到当前打开的文档</td>
+</tr>
+<tr>
+<td align="left">document.writeIn()</td>
+<td align="left">输入文本到当前打开的文档，并添加换行符“\n”</td>
+</tr>
+<tr>
+<td align="left">document.getElementById()</td>
+<td align="left">获取某个id值的元素</td>
+</tr>
+<tr>
+<td align="left">document.getElementsByName()</td>
+<td align="left">获取某个name值的元素，用于表单元素</td>
+</tr>
+</tbody></table>
+<p>上面列出了document对象常用的属性和方法，跟window对象的学习一样，在<a href="http://www.lvyestudy.com/les_js/js_list.aspx">JavaScript入门</a>阶段，站长只会给大家讲解最实用的。对于那种压根儿用不上的，我也懒得花时间去写。</p>
+<h3 id="二、训练题（1）网页动态标题"><a href="#二、训练题（1）网页动态标题" class="headerlink" title="二、训练题（1）网页动态标题"></a>二、训练题（1）网页动态标题</h3><p>在浏览网页的时候，我们经常看到不少网页标题在闪动。这一节我们给大家讲解一个实际开发中的技巧“网页动态标题”。</p>
+<p>实现代码如下：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617181920212223242526272829</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义全局变量，用于标识``    ``var</code> <code>flag = 0;``    ``window.onload = ``function</code> <code>() &#123;``      ``//定时器``      ``setInterval(``&quot;titleChange()&quot;``, 1000);``    ``&#125;``    ``//定义函数``    ``function</code> <code>titleChange() &#123;``      ``if``(flag==0)``      ``&#123;``        ``document.title = ``&quot;★☆★绿叶学习网★☆★&quot;``;``        ``flag = 1;``      ``&#125;``      ``else``      ``&#123;``        ``document.title = ``&quot;☆★☆绿叶学习网☆★☆&quot;``;``        ``flag = 0;``      ``&#125;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEyLTgtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript实现网页动态标题_"></p>
+<p>分析：</p>
+<p>这个例子使用在线测试不会有效果，请大家在本地编辑器中测试预览。</p>
+<p>这里主要使用了页面加载事件window.onload和<a href="http://www.lvyestudy.com/les_js/js_10.6.aspx">JavaScript定时器</a>。算法很简单，只要使用了一个全局变量作为标识。</p>
+<h2 id="5、DOM对象"><a href="#5、DOM对象" class="headerlink" title="5、DOM对象"></a>5、DOM对象</h2><p>DOM，全称“Document Object Model（文档对象模型）”，它是由W3C组织定义的一个标准。</p>
+<p>很多书籍一上来就大篇幅地展开说明DOM的历史和定义，看了老半天也不知道DOM是什么鬼。在这里，关于DOM的风流逸事就不展开了，免得初学者看得一头雾水，也浪费时间。</p>
+<p>在前端开发时，我们往往需要在页面某个地方添加一个元素或者删除元素，这种添加元素、删除元素的操作就是通过DOM来实现的。</p>
+<p>说白了，DOM就是一个接口，我们可以通过DOM来操作页面中各种元素，例如添加元素、删除元素、替换元素等。这下大家就懂了吧。</p>
+<p>记住，DOM就是文档对象模型，文档对象模型就是DOM，很多人在学习DOM的时候看到“文档对象模型”还不知道是什么？= =||</p>
+<p>在DOM学习中，记住最重要的一句话：每一个元素节点都看成一个“对象”。由于元素节点也是一个对象，因此他们有自身的属性和方法。</p>
+<h3 id="一、DOM节点属性"><a href="#一、DOM节点属性" class="headerlink" title="一、DOM节点属性"></a>一、DOM节点属性</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">parentNode</td>
+<td align="left">获取当前节点的父节点</td>
+</tr>
+<tr>
+<td align="left">childNodes</td>
+<td align="left">获取当前节点的子节点集合</td>
+</tr>
+<tr>
+<td align="left">firstChild</td>
+<td align="left">获取当前节点的第一个子节点</td>
+</tr>
+<tr>
+<td align="left">lastChild</td>
+<td align="left">获取当前节点的最后一个子节点</td>
+</tr>
+<tr>
+<td align="left">previousSibling</td>
+<td align="left">获取当前节点的前一个兄弟节点</td>
+</tr>
+<tr>
+<td align="left">nextSibling</td>
+<td align="left">获取当前节点的后一个兄弟节点</td>
+</tr>
+<tr>
+<td align="left">attributes</td>
+<td align="left">元素的属性列表</td>
+</tr>
+</tbody></table>
+<h3 id="二、DOM节点操作"><a href="#二、DOM节点操作" class="headerlink" title="二、DOM节点操作"></a>二、DOM节点操作</h3><p>在JavaScript中，可以通过以下2种方式来选中指定元素：</p>
+<p>（1）getElementById()；</p>
+<p>在JavaScript中，如果想通过id来选中元素，我们可以使用document对象的getElementById()方法。</p>
+<p>getElementById()方法类似于CSS中的id选择器。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>document.getElementById(``&quot;元素id&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;div id=``&quot;lvye&quot;``&gt;绿叶学习网JavaScript入门教程&lt;/div&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>e = document.getElementById(``&quot;lvye&quot;``);``    ``e.style.color = ``&quot;red&quot;``;``  ``&lt;/script&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEzLTQtMS5wbmc?x-oss-process=image/format,png" alt="getElementById()"></p>
+<p>分析：</p>
+<p>这里使用document.getElementById()的方法获取id为lvye的div元素，然后把这个DOM对象赋值给变量e，然后使用DOM对象的style对象来设置div元素颜色为红色。</p>
+<p>（2）getElementsByName()；</p>
+<p>在JavaScript中，如果想通过name来选中元素，我们可以使用document对象的getElementsByName()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>document.getElementsByName(``&quot;表单元素name值&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>getElementsByName()方法都是用于获取表单元素。</p>
+<p>与getElementById()方法不同的是，使用该方法的返回值是一个数组，而不是一个元素。因此，我们想要获取具体的某一个表单元素，就必须通过数组下标来获取。</p>
+<p>注意，是getElementsByName()而不是getElementByName()。数组嘛，当然是复数。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio1&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;HTML&quot;``/&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio2&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;CSS&quot;``/&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio3&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;JavaScript&quot;``/&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio4&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;jQuery&quot;``/&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``alert(document.getElementsByName(``&quot;web&quot;``)[0].value);``  ``&lt;/script&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEzLTQtMi5wbmc?x-oss-process=image/format,png" alt="getElementsByName()"></p>
+<p>分析：</p>
+<p>getElementsByName()方法在实际开发中比较少用，大家了解一下即可。</p>
+<p>其实可以这样说， getElementById()和getElementsByName()这两种方法是“JavaScript选择器”。</p>
+<p>除了getElementById()和getElementsByName()这两种方法，JavaScript还提供另外一种getElementByTagName()方法，这个方法类似于CSS中的元素选择器。但是getElementByTagName()方法有个很大缺点，它会把整个页面中相同的元素都选中。用起来也比较麻烦，实际开发中很少用到。</p>
+<p><strong>1、创建节点</strong></p>
+<p>在JavaScript中，创建新节点都是先用document对象中的createElement()和createTextNode()这2种方法创建一个元素节点，然后再通过appendChild()、insertBefore()等方法把新元素节点插入现有的元素节点中去。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th><code>var</code> <code>e = document.createElement(``&quot;元素名&quot;``);``var</code> <code>txt = document.createTextNode(``&quot;元素内容&quot;``);``e.appendChild(t);  ``//把元素内容插入元素中去</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>2、插入节点</strong></p>
+<p>在JavaScript中，插入节点有2种方法：appendChild()和insertBefore()。</p>
+<p>（1）appendChild()</p>
+<p>在JavaScript中，我们可以使用appenChild()方法把新的节点插入到当前节点的“内部”。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.appendChild(``new``)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj表示当前节点，new表示新节点。</p>
+<p>（2）insertBefore()</p>
+<p>在JavaScript中，我们可以使用insertBefore()方法将新的子节点添加到当前节点的“末尾”。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.insertBefore(``new``,ref)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj表示父节点；</p>
+<p>new表示新的子节点；</p>
+<p>ref指定一个节点，在这个节点前插入新的节点。</p>
+<p><strong>3、删除节点</strong></p>
+<p>在JavaScript中，我们可以使用removeChild()方法来删除当前节点下的某个子节点。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.removeChild(oldChild);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数obj表示当前节点，而参数oldChild表示需要当前节点内部的某个子节点。</p>
+<p><strong>4、复制节点</strong></p>
+<p>在JavaScript中，我们可以使用cloneNode()方法来实现复制节点。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.cloneNode(bool)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数obj表示被复制的节点，而参数bool是一个布尔值，取值如下：</p>
+<p>（1）1或true：表示复制节点本身以及复制该节点下的所有子节点；</p>
+<p>（2）0或false：表示仅仅复制节点本身，不复制该节点下的子节点；</p>
+<p><strong>5、替换节点</strong></p>
+<p>在JavaScript中，我们可以使用replaceChild()方法来实现替换节点。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.replaceChild(``new``,old)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj，表示被替换节点的父节点；</p>
+<p>new，表示替换后的新节点；</p>
+<p>old，需要被替换的旧节点。</p>
+<p><strong>6、innerHTML和innerText</strong></p>
+<p>在JavaScript中，我们可以使用innerHTML和innerText这2个属性很方便地获取和设置某一个元素内部子元素或文本。</p>
+<p>innerHTML属性被多数浏览器所支持，而innerText只能被IE、chrome等支持而不被Firefox支持。</p>
+<p><strong>7、JavaScript操作CSS样式</strong></p>
+<p>在JavaScript中，对于元素的CSS操作，我们使用的是DOM对象中的style对象来操作。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.style.属性名;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj指的是DOM对象，也就是通过document.getElementById()等获取而来的DOM元素节点。</p>
+<h2 id="6、JavaScript对象"><a href="#6、JavaScript对象" class="headerlink" title="6、JavaScript对象"></a>6、JavaScript对象</h2><h3 id="一、事件是什么？"><a href="#一、事件是什么？" class="headerlink" title="一、事件是什么？"></a>一、事件是什么？</h3><p>在JavaScript中，事件往往是页面的一些动作引起的，例如当用户按下鼠标或者提交表单，甚至在页面移动鼠标时，事件都会出现。</p>
+<h3 id="二、JavaScript事件"><a href="#二、JavaScript事件" class="headerlink" title="二、JavaScript事件"></a>二、JavaScript事件</h3><p>在JavaScript中，调用事件的方式共有2种：</p>
+<p>（1）在script标签中调用；</p>
+<p>在script标签中调用事件，也就是在<script></script标签内部调用事件。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12345</th>
+<th><code>var</code> <code>变量名 = document.getElementById(``&quot;元素id&quot;``);``//获取某个元素，并赋值给某个变量``变量名.事件处理器 = ``function``()``&#123;``  ``……``&#125;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input id=``&quot;btn&quot;</code> <code>type=``&quot;button&quot;</code> <code>value=``&quot;提交&quot;</code> <code>/&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>e = document.getElementById(``&quot;btn&quot;``);``    ``e.onclick = ``function</code> <code>() &#123;``      ``alert(``&quot;绿叶学习网&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMS5wbmc?x-oss-process=image/format,png" alt="JavaScript事件调用方式"></p>
+<p>分析：</p>
+<p>当点击了按钮之后，JavaScript就会调用鼠标的点击（onclick）事件，效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMi5wbmc?x-oss-process=image/format,png" alt="JavaScript调用事件"></p>
+<p>很多人觉得很奇怪，document.getElementById()获取的是一个元素，能赋值给一个变量吗？答案是可以的。那问题又来了，为什么要使用document.getElementById()来获取一个元素赋值给一个变量呢？用以下代码不行么？</p>
+<table>
+<thead>
+<tr>
+<th>12345</th>
+<th><code>&lt;script type=``&quot;text/javascript&quot;``&gt;``  ``document.getElementById(``&quot;btn&quot;``).onclick = ``function``&#123;``    ``alert(``&quot;绿叶学习网&quot;``);``  ``&#125;``&lt;/script&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>其实上述代码也是可行的，只不过呢，如果不使用document.getElementById()来获取一个元素赋值给一个变量，以后我们如果要对该元素进行多次不同操作，岂不是每次都要写document.getElementById()？这样的话，代码就会显得很冗余。</p>
+<p>（2）在元素中调用；</p>
+<p>在元素事件中引入JS，就是指在元素的某一个属性中直接编写JavaScript程序或调用JavaScript函数，这个属性指的是元素的“事件属性”。</p>
+<p>举例1：（在元素事件属性中直接编写JavaScript）</p>
+<table>
+<thead>
+<tr>
+<th>123456789</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>onclick=``&quot;alert(&#39;绿叶学习网&#39;)&quot;</code> <code>value=``&quot;按钮&quot;``/&gt;``&lt;body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下（点击按钮后的效果）：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMy5wbmc?x-oss-process=image/format,png" alt="在元素中调用JavaScript事件"></p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>alertMessage()``    ``&#123;``      ``alert(``&quot;绿叶学习网&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>onclick=``&quot;alertMessage()&quot;</code> <code>value=``&quot;按钮&quot;``/&gt;``&lt;body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果（点击按钮后的效果）如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItNC5wbmc?x-oss-process=image/format,png" alt="在元素中调用事件"></p>
+<p>分析：</p>
+<p>那么这两种方法有什么本质的区别呢？其实，第2种方法不需要使用getElementById()等方法来获取DOM，然后才调用函数或方法。因为它是直接在JavaScript元素中调用的。</p>
+<p>这2种调用JavaScript事件的方式，大家刚刚开始看不理解没关系，我们只是给大家说个语法，留个印象。在接下来的章节中，我们会经常接触。</p>
+<p><strong>1、鼠标事件</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onclick</td>
+<td align="left">鼠标单击事件</td>
+</tr>
+<tr>
+<td align="left">ondbclick</td>
+<td align="left">鼠标双击事件</td>
+</tr>
+<tr>
+<td align="left">onmouseover</td>
+<td align="left">鼠标移入事件</td>
+</tr>
+<tr>
+<td align="left">onmouseout</td>
+<td align="left">鼠标移出事件</td>
+</tr>
+<tr>
+<td align="left">onmousemove</td>
+<td align="left">鼠标移动事件</td>
+</tr>
+<tr>
+<td align="left">onmousedown</td>
+<td align="left">鼠标按下事件</td>
+</tr>
+<tr>
+<td align="left">onmouseup</td>
+<td align="left">鼠标松开事件</td>
+</tr>
+</tbody></table>
+<p><strong>2、键盘事件</strong></p>
+<p>JavaScript键盘事件只有3个：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onkeydown</td>
+<td align="left">按下键事件（包括数字键、功能键）</td>
+</tr>
+<tr>
+<td align="left">onkeypress</td>
+<td align="left">按下键事件（只包含数字键）</td>
+</tr>
+<tr>
+<td align="left">onkeyup</td>
+<td align="left">放开键事件（包括数字键、功能键）</td>
+</tr>
+</tbody></table>
+<p>三个事件的执行顺序如下：onkeydown -&gt; onkeypress -&gt;onkeyup。</p>
+<p><strong>3、表单事件</strong></p>
+<p>在JavaScript中，常用的表单事件有4种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onfocus</td>
+<td align="left">获取焦点事件</td>
+</tr>
+<tr>
+<td align="left">onblur</td>
+<td align="left">失去焦点事件</td>
+</tr>
+<tr>
+<td align="left">onchange</td>
+<td align="left">状态改变事件</td>
+</tr>
+<tr>
+<td align="left">onselect</td>
+<td align="left">选中文本事件</td>
+</tr>
+</tbody></table>
+<p><strong>4、编辑事件</strong></p>
+<p>在JavaScript中，常见的编辑事件有3种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">oncopy</td>
+<td align="left">复制事件</td>
+</tr>
+<tr>
+<td align="left">oncut</td>
+<td align="left">剪切事件</td>
+</tr>
+<tr>
+<td align="left">onpaste</td>
+<td align="left">粘贴事件</td>
+</tr>
+</tbody></table>
+<p>这3个事件都对应有一个“onbeforeXXX”事件，表示发生在该事件之前的事件。</p>
+<p><strong>5、页面相关事件</strong></p>
+<p>在JavaScript中，常用的页面相关事件有3种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onload</td>
+<td align="left">页面加载事件</td>
+</tr>
+<tr>
+<td align="left">onresize</td>
+<td align="left">页面大小事件</td>
+</tr>
+<tr>
+<td align="left">onerror</td>
+<td align="left">页面或图片加载出错事件</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
+  <entry>
+    <title>javascript</title>
+    <url>/2018/11/23/JavaScript%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h1><a id="more"></a>
+
+<p>HTML页面是静态的，而JavaScript可以弥补HTML语言的缺陷，实现Web页面客户端的动态效果。JavaScript的作用有以下几点：</p>
+<h3 id="1、动态改变页面内容"><a href="#1、动态改变页面内容" class="headerlink" title="1、动态改变页面内容"></a>1、动态改变页面内容</h3><p>HTML页面是静态的，一旦编写，内容是无法改变的。JavaScript可以弥补这个不足，可以将内容动态地显示在网页中。</p>
+<h3 id="2、动态改变网页的外观"><a href="#2、动态改变网页的外观" class="headerlink" title="2、动态改变网页的外观"></a>2、动态改变网页的外观</h3><p>JavaScript通过修改网页元素的CSS样式，达到动态地改变网页的外观。</p>
+<h3 id="3、验证表单数据"><a href="#3、验证表单数据" class="headerlink" title="3、验证表单数据"></a>3、验证表单数据</h3><p>我们常见的在各大网站中的注册中的验证功能，就是JavaScript实现的。</p>
+<h3 id="4、响应事件"><a href="#4、响应事件" class="headerlink" title="4、响应事件"></a>4、响应事件</h3><p>JavaScript是基于事件的语言。例如点击一个按钮弹出一个对话框，就是鼠标点击触发的事件，例如绿叶学习网教程文章中的点赞效果：</p>
+<p>对于JavaScript的理解，就一句话：如果没有使用JavaScript，网页就是静态的，唯一的功能就是给用户浏览。加入了JavaScript，网页变得绚丽多彩起来。</p>
+<h1 id="三、内容"><a href="#三、内容" class="headerlink" title="三、内容"></a>三、内容</h1><h2 id="1、JavaScript简介"><a href="#1、JavaScript简介" class="headerlink" title="1、JavaScript简介"></a>1、JavaScript简介</h2><h3 id="一、JavaScript是什么？"><a href="#一、JavaScript是什么？" class="headerlink" title="一、JavaScript是什么？"></a>一、JavaScript是什么？</h3><p>1、HTML是网页的结构，CSS是网页的外观，而JavaScript是页面的行为。</p>
+<p>2、HTML页面是静态的（只供浏览），平常我们所见到的各种网页特效就是使用JavaScript实现的。</p>
+<h3 id="二、JavaScript编辑工具"><a href="#二、JavaScript编辑工具" class="headerlink" title="二、JavaScript编辑工具"></a>二、JavaScript编辑工具</h3><p>常用的JavaScript编辑工具有：</p>
+<p>（1）记事本；</p>
+<p>（2）Dreamweaver；</p>
+<p>（3）UltraEdit-32；</p>
+<p>（4）Visual Studio；</p>
+<p>（5）sublime Text</p>
+<p>绿叶学习网系列教程推荐使用Visual Studio作为网站开发工具。</p>
+<h3 id="三、JavaScript在HTML的引用方式"><a href="#三、JavaScript在HTML的引用方式" class="headerlink" title="三、JavaScript在HTML的引用方式"></a>三、JavaScript在HTML的引用方式</h3><p>JavaScript在HTML的引用方式共有4种：</p>
+<p>（1）页头引入（head标签内）；</p>
+<p>（2）页中引入（body标签内）；</p>
+<p>（3）元素事件中引入（标签属性中引入）；</p>
+<p>（4）引入外部JS文件；</p>
+<h3 id="四、JavaScript和Java的关系"><a href="#四、JavaScript和Java的关系" class="headerlink" title="四、JavaScript和Java的关系"></a>四、JavaScript和Java的关系</h3><p>JavaScript和Java只有一毛钱的关系，无他。</p>
+<p>JavaScript和Java虽然名字相似，但是本质上是不同的。</p>
+<p>（1）JavaScript往往都是在网页中使用，而Java却可以在软件、网页、手机App等各个领域中使用；</p>
+<p>（2）Java是一门面向对象的语言，而从本质上讲，JavaScript更像是一门函数式编程语言；</p>
+<h3 id="五、训练题"><a href="#五、训练题" class="headerlink" title="五、训练题"></a>五、训练题</h3><p>在进入JavaScript基础学习之前，先让大家接触一下神奇的javascript程序究竟是怎样的？</p>
+<p>这个例子实现的功能是：在页面打开时候，弹出对话框显示“欢迎您来到绿叶学习网！”。</p>
+<p>程序代码实现如下：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;第一个javascript程序&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>enterMes()``    ``&#123;``      ``alert(``&quot;欢迎您来到绿叶学习网！&quot;``);``    ``&#125;``    ``window.onload=enterMes();``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>刚刚打开这个页面时，在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEtNi0xLnBuZw?x-oss-process=image/format,png" alt="javascript程序"></p>
+<h2 id="2、JavaScript入门基础"><a href="#2、JavaScript入门基础" class="headerlink" title="2、JavaScript入门基础"></a>2、JavaScript入门基础</h2><h3 id="一、数据结构"><a href="#一、数据结构" class="headerlink" title="一、数据结构"></a>一、数据结构</h3><p>JavaScript的数据结构包括：标识符、关键字、常量、变量等。</p>
+<p><strong>1、标识符</strong></p>
+<p>标识符，说白了，就是一个名字。在JavaScript中，变量和函数等都需要定义一个名字，这个名字就可以称为“标识符”。</p>
+<p>JavaScript语言中标识符最重要的3点就是：</p>
+<p>（1）第一个字符必须是字母、下划线（_）或美元符号这3种其中之一，其后的字符可以是字母、数字或下划线、美元符号；</p>
+<p>（2）变量名不能包含空格、加号、减号等符号；</p>
+<p>（3）标识符不能和JavaScript中用于其他目的的关键字同名；</p>
+<p><strong>2、关键字</strong></p>
+<p>JavaScript关键字是指在JavaScript语言中有特定含义，成为JavaScript语法中一部分的那些字。</p>
+<p><strong>3、常量</strong></p>
+<p>常量，顾名思义就是指不能改变的量。常量的指从定义开始就是固定的，一直到程序结束。</p>
+<p>常量主要用于为程序提供固定和精确的值，包括数值和字符串，如数字、逻辑值真（true）、逻辑值假（false）等都是常量。</p>
+<p><strong>4、变量</strong></p>
+<p>变量，顾名思义，就是指在程序运行过程中，其值是可以改变的。</p>
+<h3 id="二、JavaScript数据类型"><a href="#二、JavaScript数据类型" class="headerlink" title="二、JavaScript数据类型"></a>二、JavaScript数据类型</h3><p>JavaScript数据类型有2大分类：一是“基本数据类型”，二是“特殊数据类型”。</p>
+<p>其中，基本数据类型包括以下3种：</p>
+<ul>
+<li>（1）数字型（Number型）：如整型84，浮点型3.14；</li>
+<li>（2）字符串型（String型）：如”绿叶学习网”；</li>
+<li>（3）布尔型（Boolean型）：true或fasle；</li>
+</ul>
+<p>特殊数据类型有3种：</p>
+<ul>
+<li>（1）空值（null型）；</li>
+<li>（2）未定义值（undefined型）；</li>
+<li>（3）转义字符；</li>
+</ul>
+<p>根据个人的开发经验中，只需要记忆\n、&#39;、&quot;这3个就已经够初学者走很远了，其他的转义字符我们完全没必要去记忆，到时候需要的时候再回来查表就行了，大家别浪费脑细胞喔。</p>
+<h3 id="三、运算符"><a href="#三、运算符" class="headerlink" title="三、运算符"></a>三、运算符</h3><p>JavaScript的运算符按运算符类型可以分为以下5种：</p>
+<p>（1）算术运算符；</p>
+<p>（2）比较运算符；</p>
+<p>（3）赋值运算符；</p>
+<p>（4）逻辑运算符；</p>
+<p>（5）条件运算符；</p>
+<h3 id="四、typeof运算符"><a href="#四、typeof运算符" class="headerlink" title="四、typeof运算符"></a>四、typeof运算符</h3><p>typeof运算符用于返回它的操作数当前所容纳的数据的类型，这对于判断一个变量是否已被定义特别有用。</p>
+<p>例如：typeof(1)返回值是number，typeof(“javascript”)返回值是string。</p>
+<h3 id="五、表达式"><a href="#五、表达式" class="headerlink" title="五、表达式"></a>五、表达式</h3><p>表达式是一个语句的集合，计算结果是个单一值。</p>
+<p>在JavaScript中，常见的表达式有4种：</p>
+<p>（1）赋值表达式；</p>
+<p>（2）算术表达式；</p>
+<p>（3）布尔表达式；</p>
+<p>（4）字符串表达式；</p>
+<h3 id="六、类型转换"><a href="#六、类型转换" class="headerlink" title="六、类型转换"></a>六、类型转换</h3><p><strong>1、字符串型转换为数值型</strong></p>
+<p>在JavaScript中，将字符串型数据转换为数值型数据有parseInt()和parseFloat()这2种方法。其中，parseInt()可以将字符串转换为整型数据；parseFloat()可以将字符串转换为浮点型数据。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>parseInt() ``//将字符串型转换为整型``parseFloat() ``//将字符串型转换为浮点型</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>2、数值型转换为字符串型</strong></p>
+<p>在JavaScript中，将数值型数据（整型或浮点型）转换为字符串，都是使用toString()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>.toString()</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="七、JavaScript基本语法"><a href="#七、JavaScript基本语法" class="headerlink" title="七、JavaScript基本语法"></a>七、JavaScript基本语法</h3><p><strong>1、执行顺序</strong></p>
+<p>JavaScript程序按照在HTML文档中出现的顺序逐行执行。如果需要在整个HTML文件中执行，最好将其放在HTML文件的标签中。某些代码，如函数体内的代码，不会被立即执行，只有当所在的函数被其他程序调用时，该代码才会被执行。</p>
+<p><strong>2、区分大小写</strong></p>
+<p>JavaScript是严格区分大小写的。例如str和Str这是两个完全不同的变量。</p>
+<p><strong>3、分号和空格</strong></p>
+<p>在JavaScript中，语句的分号“;”是可有可无的。但是我们强烈要求大家在每一句语句后面加一个分号“;”，这是一个非常重要的代码编写习惯。</p>
+<p>另外，JavaScript会忽略多余的空格，用户可以向脚本添加空格，来提高代码的可读性，说白了就是让代码“漂亮点”，读得舒服一点。</p>
+<p>例如：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>var</code> <code>str=``&quot;绿叶学习网JavaScript教程&quot;``;``var</code> <code>str = ``&quot;绿叶学习网JavaScript教程&quot;``; ``//这一行代码读起来舒服一点</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="八、JavaScript注释"><a href="#八、JavaScript注释" class="headerlink" title="八、JavaScript注释"></a>八、JavaScript注释</h3><p>在编写JavaScript代码时，我们经常要在一些关键代码旁做一下注释，这样做的好处很多。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>//单行注释内容``/*多行注释内容*/</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>“//”是单行注释方式，如果你的注释内容只占一行就应该使用这种注释方式。“/**/”是多行注释方式，如果你的注释内容占多行建议使用这种注释方式。</p>
+<h2 id="3、流程控制"><a href="#3、流程控制" class="headerlink" title="3、流程控制"></a>3、流程控制</h2><p>JavaScript对程序流程的控制跟其他编程语言是一样的，主要有3种：</p>
+<p>（1）顺序结构；</p>
+<p>（2）选择结构；</p>
+<p>（3）循环结构；</p>
+<h3 id="一、选择结构"><a href="#一、选择结构" class="headerlink" title="一、选择结构"></a>一、选择结构</h3><p>在JavaScript中，选择结构共有5种：</p>
+<p>（1）if语句;</p>
+<p>（2）if……else语句;</p>
+<p>（3）if……else if……语句;</p>
+<p>（4）if语句的嵌套;</p>
+<p>（5）switch语句;</p>
+<h3 id="二、循环结构"><a href="#二、循环结构" class="headerlink" title="二、循环结构"></a>二、循环结构</h3><p>在JavaScript中，循环结构总有3种：</p>
+<p>（1）while语句；</p>
+<p>（2）do……while语句；</p>
+<p>（3）for语句；</p>
+<h3 id="三、跳转语句"><a href="#三、跳转语句" class="headerlink" title="三、跳转语句"></a>三、跳转语句</h3><p>JavaScript支持的跳转语句主要有2种：</p>
+<p>（1）break语句；</p>
+<p>（2）continue语句；</p>
+<p>break语句与continue语句的主要区别是：break是彻底结束循环，而continue是结束本次循环。在这一点跟其他编程语言（如C和Java）相同。</p>
+<h3 id="四、训练题"><a href="#四、训练题" class="headerlink" title="四、训练题"></a>四、训练题</h3><p>（1）题目：计算100以内所有奇数的和比较简单，使用for语句就可以实现。</p>
+<p>代码实现如下：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>sum=0;``    ``for``(``var</code> <code>i=1;i&lt;100;i+=2)``    ``&#123;``      ``sum+=i;``    ``&#125;``    ``document.write(``&quot;100以内所有奇数和为：&quot;``+sum);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzMtMTAtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript计算100以内所有奇数的和"></p>
+<p>分析：</p>
+<p>“i+=2”等价于“i=i+2”，“sum+=i”等价于“sum=sum+i”。这些基础的东西可别忘了。</p>
+<p>（2）</p>
+<p>题目：输出所有的“水仙花数”。所谓“水仙花数”是指一个3位数，其各位数字立方和等于该数的本身。例如，153就是一个水仙花数，因为153=13+53+33。</p>
+<p>代码实现如下：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617181920212223</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``document.write(``&quot;水仙花数有：&quot;``);``    ``for``(``var</code> <code>i=100;i&lt;1000;i++)``    ``&#123;``      ``var</code> <code>a=i%10;``//提取个位数``      ``var</code> <code>b=(i/10)%10 ``//提取十位数``      ``b=parseInt(b);``      ``var</code> <code>c=i/100;``//提取百位数``      ``c=parseInt(c);``      ``if``(i==(a*a*a+b*b*b+c*c*c))``      ``&#123;``        ``document.write(i+``&quot;,&quot;``);``      ``&#125;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzMtMTEtMS5wbmc?x-oss-process=image/format,png" alt="水仙花数"></p>
+<p>分析：</p>
+<p>parseInt()函数是将一个数转换为整型数据，我们在“<a href="http://www.lvyestudy.com/les_js/js_2.8.aspx">JavaScript类型转换</a>”这一节中已经详细给大家讲解了。</p>
+<p>（3）</p>
+<p>题目：找出字符串中“how are you doing？”中所有小于字母“s”的字符，并在页面输出。</p>
+<p>代码实现如下：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617181920</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str=``&quot;how are you doing？&quot;``;``    ``var</code> <code>result=``&quot;&quot;``;``    ``for``(``var</code> <code>i=0;i&lt;str.length;i++)``    ``&#123;``      ``if``(str.charAt(i)&lt;``&quot;s&quot;``)``      ``&#123;``        ``result+=str.charAt(i)+``&quot;,&quot;``;``      ``&#125;``    ``&#125;``    ``document.write(result);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzMtMTItMS5wbmc?x-oss-process=image/format,png" alt="img"></p>
+<p>分析：</p>
+<p>这些是字符串的内容，如果大家不懂没关系，现在只是让大家接触一下。因为例子要是太过于简单，大家学得也没有激情。这些在“<a href="http://www.lvyestudy.com/les_js/js_6.1.aspx">JavaScript字符串对象</a>”这一章中，我们会详细讲解到。</p>
+<h2 id="4、函数"><a href="#4、函数" class="headerlink" title="4、函数"></a>4、函数</h2><h3 id="一、函数是什么？"><a href="#一、函数是什么？" class="headerlink" title="一、函数是什么？"></a>一、函数是什么？</h3><p>函数，就是一个一系列JavaScript语句的集合，这是为了完成某一个会重复使用的特定功能。在需要该功能的时候，直接调用函数即可，而不必每次都编写一大堆重复的代码。并且在需要修改该功能的时候，也只要修改和维护这一个函数即可。</p>
+<p>总之，将语句集合成函数，好处就是方便代码重用。并且，一个好的函数名，可以让人一眼就知道这个函数实现的是什么功能，方便维护。</p>
+<p>函数的使用只需要2步：</p>
+<p>（1）定义函数；</p>
+<p>（2）调用函数；</p>
+<h3 id="二、函数的定义"><a href="#二、函数的定义" class="headerlink" title="二、函数的定义"></a>二、函数的定义</h3><p>在JavaScript中，使用函数前，必须用function关键字来定义函数。</p>
+<p>函数常用方式有2种：</p>
+<p>（1）不指定函数名的函数；</p>
+<p>（2）指定函数名的函数；</p>
+<p><strong>1、不指定函数名的函数</strong></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1234</th>
+<th><code>function``(参数1,参数2,….,参数n)``&#123;``  ``//函数体语句``&#125;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>定义函数必须使用function关键字。</p>
+<p><strong>2、指定函数名的函数</strong></p>
+<p>“指定函数名的函数”是JavaScript中使用最广泛的方法，反而“不指定函数名的函数”用得比较少。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12345</th>
+<th><code>function</code> <code>函数名(参数1,参数2,….,参数n)``&#123;``  ``//函数体语句``  ``return</code> <code>表达式;``&#125;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>定义函数必须使用function关键字来定义。</p>
+<p>函数名必须是唯一的，尽量通俗易懂，并且跟你定义的代码有关。</p>
+<p>函数可以使用return语句将某个值返回，也可以没有返回值。</p>
+<p>参数是可选的，可以不带参数，也可以带多个参数。如果是多个参数的话，参数之间要用英文逗号隔开。</p>
+<h3 id="三、函数的调用"><a href="#三、函数的调用" class="headerlink" title="三、函数的调用"></a>三、函数的调用</h3><p>常用的函数调用方式有4种：</p>
+<p>（1）简单调用；</p>
+<p>（2）在表达式中调用；</p>
+<p>（3）在事件响应中调用；</p>
+<p>（4）通过链接调用；</p>
+<h3 id="四、特殊函数"><a href="#四、特殊函数" class="headerlink" title="四、特殊函数"></a>四、特殊函数</h3><p>JavaScript特殊函数有3种：</p>
+<ul>
+<li>（1）嵌套函数；</li>
+<li>（2）递归函数；</li>
+<li>（3）内置函数；</li>
+</ul>
+<p>下面详细给大家讲解一下这3中函数调用方式。</p>
+<p><strong>1、嵌套函数</strong></p>
+<p>嵌套函数，顾名思义，就是在一个函数的内部定义另外一个函数。不过在内部定义的函数只能在内部调用，如果在外部调用，就会出错。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415161718192021222324252627</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义阶乘函数``     ``function</code> <code>fun(a)``     ``&#123;``       ``//嵌套函数定义，计算平方值的函数``       ``function</code> <code>multi (x)``       ``&#123;``         ``return</code> <code>x*x;``       ``&#125;``       ``var</code> <code>m=1;``       ``for``(``var</code> <code>i=1;i&lt;=multi(a);i++)``       ``&#123;``         ``m=m*i;``       ``&#125;``       ``return</code> <code>m;``     ``&#125;``     ``var</code> <code>sum =fun(2)+fun(3);``     ``document.write(sum);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzQtNC0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript嵌套函数"></p>
+<p>分析：</p>
+<p>上面定义的multi函数只能在fun函数内部使用，如果在fun函数外部调用就会出错，大家可以在“在线测试”中自己修改代码测试一下。</p>
+<p><strong>2、递归函数</strong></p>
+<p>递归函数是一种非常重要的编程技术，当年我在学习其他编程技术（如C、C++、Java等）都经常用到。</p>
+<p>递归函数用于让一个函数从其内部调用其本身。不过需要注意的是，如果递归函数处理不当，就会使程序陷入“死循环”。为了防止“死循环”的出现，可以设计一个做自加运算的变量，用于记录函数自身调用的次数，如果次数太多就让它自动退出循环。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1234</th>
+<th><code>function</code> <code>递归函数名(参数1)``&#123;``  ``递归函数名(参数2)``&#125;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>在定义递归函数时，需要2个必要条件：</p>
+<p>（1）首先包括一个结束递归的条件；</p>
+<p>（2）其次包括一个递归调用的语句；</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617181920212223242526272829303132333435363738</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``     ``var</code> <code>msg=``&quot;\n函数的递归调用：\n\n&quot;``;``     ``//响应按钮的点击事件``     ``function</code> <code>Test()``     ``&#123;``       ``var</code> <code>result;``       ``msg+=``&quot;调用语句：\n&quot;``;``       ``msg+=``&quot;  result=sum(20);\n&quot;``;``       ``msg+=``&quot;调用步骤：\n&quot;``;``       ``result=sum(20);``       ``msg+=``&quot;计算结果：\n&quot;``;``       ``msg+=``&quot;  result=&quot;``+result+``&quot;\n&quot;``;``       ``alert(msg);``     ``&#125;``     ``//计算当前步骤加和值``     ``function</code> <code>sum(m)``     ``&#123;``       ``if``(m==0)``       ``&#123;``         ``return</code> <code>0;``       ``&#125;``       ``else``       ``&#123;``         ``msg+=``&quot;  result=&quot;``+m+``&quot;+sum(&quot;``+(m-2)+ ``&quot;);\n&quot;``;``         ``result=m+sum(m-2);``       ``&#125;``       ``return</code> <code>result;``     ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;测试&quot;</code> <code>onclick=``&quot;Test()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzQtNC0yLnBuZw?x-oss-process=image/format,png" alt="JavaScript递归函数"></p>
+<p>分析：</p>
+<p>在上述代码中，为了求取20以内的偶数和，定义了递归函数sum(m)，而函数Test()对其进行调用，并使用alert()方法弹出相应的提示信息。</p>
+<p>递归函数对于初学者来说可能比较难以理解，如果实在不会，可以直接忽略它。因为在JavaScript中是比较少用到递归函数的，递归函数往往都是在其他编程语言中用得比较多。到时候需要的时候我们回来翻翻就OK了。</p>
+<p><strong>3、内置函数</strong></p>
+<p>JavaScript中有2种函数：一种是用户自定义函数，另外一种是JavaScript语言内部已经定义好了，可以直接供我们调用的函数（也就是内置函数）。</p>
+<p>内置函数由于已经在JavaScript语言内部定义好了的，也就是我们不需要自己定义就能用了。这样极大方便了我们的编程。</p>
+<h1 id="五、JavaScript函数中的参数（arguments）"><a href="#五、JavaScript函数中的参数（arguments）" class="headerlink" title="五、JavaScript函数中的参数（arguments）"></a>五、JavaScript函数中的参数（arguments）</h1><p><strong>arguments</strong></p>
+<p>　argument是JavaScript中的一个关键字，用于指向调用者传入的所有参数。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    alert(x); <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    alert(<span class="built_in">arguments</span>.length); <span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="built_in">arguments</span>.length; i++)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        alert(<span class="built_in">arguments</span>[i]);  <span class="comment">//1,2,3   </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;      </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">example(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>　即使不定义参数，也可以取到调用者的参数。</p>
+<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line">function <span class="built_in">abs</span>() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (arguments.length === <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> <span class="symbol">x</span> = arguments[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="symbol">x</span> &gt;= <span class="number">0</span> ? <span class="symbol">x</span> : -<span class="symbol">x</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">abs</span>(); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">10</span>); <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">-9</span>); <span class="comment">// 9</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>REST</strong></p>
+<p>　由于JavaScript函数允许接收任意个参数，所以不得不用arguments来获取函数定义a以外的参数。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">exm</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> rest = [];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i&lt;<span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            rest.push(<span class="built_in">arguments</span>[i]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>　其实ES6给了新的rest参数，用在函数最后，多余的参数以数组的形式交给变量rest，如果传入的参数未填满函数定义的参数，rest会是一个空数组。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">exm</span>(<span class="params">a, b, ...rest</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;a = &#x27;</span> + a);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;b = &#x27;</span> + b);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(rest);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">exm(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// a = 1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// b = 2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Array [ 3, 4, 5 ]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">exm(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// a = 1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// b = undefined</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Array []</span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&#x27;Hello&#x27;</span> + <span class="built_in">arguments</span>[<span class="number">0</span>] + <span class="built_in">arguments</span>[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		say(<span class="string">&#x27;World！&#x27;</span>, <span class="string">&#x27;ByeBye！&#x27;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://img-blog.csdnimg.cn/20191228183845938.png" alt="img"></h3><h3 id="六、练习题"><a href="#六、练习题" class="headerlink" title="六、练习题"></a>六、练习题</h3><p>（1）</p>
+<p>题目：在页面中添加两个单行文本框，在两个文本框中输入两个数字，使用<a href="http://www.lvyestudy.com/les_js/js_4.1.aspx">JavaScript函数</a>比较这两个函数大小，并使用对话框输出最大数。</p>
+<p>实现代码如下：</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415161718192021222324252627282930</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>maxNum()``    ``&#123;``      ``//获取两个文本框的值``      ``var</code> <code>x = document.getElementById(``&quot;num1&quot;``).value;``      ``var</code> <code>y = document.getElementById(``&quot;num2&quot;``).value;``      ``//强制转换为数值型``      ``x = parseFloat(x);``      ``y = parseFloat(y);``      ``if``(x&lt;y)``      ``&#123;``        ``alert(``&quot;最大数是：&quot;``+y);``      ``&#125;``      ``else``      ``&#123;``        ``alert(``&quot;最大数是：&quot;``+x);``      ``&#125;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``第一个数是：&lt;input type=``&quot;text&quot;</code> <code>id=``&quot;num1&quot;``/&gt;&lt;br/&gt;``  ``第二个数是：&lt;input type=``&quot;text&quot;</code> <code>id=``&quot;num2&quot;``/&gt;&lt;br/&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>onclick=``&quot;maxNum()&quot;</code> <code>value=``&quot;计算&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzQtNi0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript比较两个数大小并输出最大数"></p>
+<p>我们随便输入两个数字如“50和100”，然后点击“计算”按钮即可输出最大数，效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzQtNi0yLnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>分析：</p>
+<p>这一个程序非常简单，但是包含的信息量不少。</p>
+<p>document.getElementById()类似于CSS中的id选择器，而document.getElementById(“num1”).value表示选取id为num1的元素并获取它的值。这个方法经常用到，大家要记一下。我们在后续课程会给大家详细讲解。</p>
+<p>这里用到了函数调用的其中一个方式“在事件中调用函数”。&lt;input type=”button” οnclick=”maxNum()”/&gt;表示在按钮点击的时候执行函数maxNum()。</p>
+<p>此外，还有一点要注意的是：有些同学呀，在定义这个函数的时候定义的函数名是max，然后发现出错了！oh~，其实那是你忽略了很基础的一点，那就是自己定义的函数名是不能与JavaScript内部定义的函数名相同。</p>
+<p>（2）</p>
+<p>题目：写一个函数，输入一个4位数字，要求使用对话框输出这4个数字字符，但每两个数字之间留一个空格，如输入1992，应输出“1 9 9 2”。</p>
+<p>代码实现如下：</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617181920212223242526272829303132</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>strNum()``    ``&#123;``      ``//获取输入文本框中的值，这里获取的值是一个字符串``      ``var</code> <code>s = document.getElementById(``&quot;num&quot;``).value;``      ``var</code> <code>s1=``&quot;&quot;``;``      ``for``(``var</code> <code>i=0;i&lt;4;i++)``      ``&#123;``        ``//如果获取的不是最后一个字符``        ``if``(i!=3)``        ``&#123;``          ``s1+=s.charAt(i)+ ``&quot; &quot;``;``        ``&#125;``        ``//如果获取的是最后一个字符``        ``else``        ``&#123;``          ``s1+=s.charAt(i);``        ``&#125;``      ``&#125;``      ``alert(s1);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``输入数字是：&lt;input type=``&quot;text&quot;</code> <code>id=``&quot;num&quot;``/&gt;&lt;br/&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>onclick=``&quot;strNum()&quot;</code> <code>value=``&quot;提交&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzQtNy0xLnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>在文本框输入2015，然后点击“提交”按钮，效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzQtNy0yLnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>分析：</p>
+<p>这里再一次用到了document.getElementById()，而字符串操作的<a href="http://www.lvyestudy.com/les_js/js_6.7.aspx">charAt()方法</a>我们在上一章的练习中也接触了，详细内容我们在字符串对象这一章会讲解。程序还是比较简单的，大家琢磨一下。</p>
+<h2 id="5、内置函数"><a href="#5、内置函数" class="headerlink" title="5、内置函数"></a>5、内置函数</h2><p>在JavaScript中，常用的内置函数有7个：</p>
+<p>（1）eval()函数</p>
+<p>（2）isFinite()函数</p>
+<p>（3）isNaN()函数</p>
+<p>（4）parseInt()函数</p>
+<p>（5）parseFloat()函数</p>
+<p>（6）escape()函数</p>
+<p>（7）unescape()函数</p>
+<h3 id="一、eval-函数"><a href="#一、eval-函数" class="headerlink" title="一、eval()函数"></a>一、eval()函数</h3><p>在JavaScript中，<a href="http://www.lvyestudy.com/les_js/js_5.2.aspx">eval()函数</a>可以把一个字符串当做一个JavaScript表达式一样去执行它。例如：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>eval(``&quot;document.write(&#39;&lt;strong&gt;JavaScript入门教程&lt;/strong&gt; &#39;)&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>上面语句说白了就是执行“document.write(‘<strong>JavaScript入门教程</strong> ‘)”,eval()函数用了等于没用一样。这是这种“多此一举”的做法，在实际开发很少用到eval()函数。</p>
+<h3 id="二、isFinite-函数"><a href="#二、isFinite-函数" class="headerlink" title="二、isFinite()函数"></a>二、isFinite()函数</h3><p>在JavaScript中，<a href="http://www.lvyestudy.com/les_js/js_5.3.aspx">isFinite()函数</a>用来确定某一个数是否是一个有限数值。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>isFinite(number)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>number参数是必选的，可以是任意的数值，例如整型、浮点型数据。</p>
+<p>如果该参数为非数字、正无穷数和负无穷数，则返回false；否则的话，返回true。如果是字符串类型的数字，就会自动转化为数字型。</p>
+<h3 id="三、isNaN-函数"><a href="#三、isNaN-函数" class="headerlink" title="三、isNaN()函数"></a>三、isNaN()函数</h3><p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>isNaN(参数)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>这里的参数可以是任何类型的数据，例如数字型、字符串型、日期时间型等。不过得注意一点，当参数是“字符串类型的数字”，就会自动转换为数字型。</p>
+<p>例如：</p>
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th><code>123 ``//这不是NaN值``&quot;123&quot;</code> <code>//这也不是NaN值，因为“字符串类型的数字”会被自动转换为数字型``&quot;abc123&quot;</code> <code>//这是NaN值</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="四、parseInt-函数和parseFloat-函数"><a href="#四、parseInt-函数和parseFloat-函数" class="headerlink" title="四、parseInt()函数和parseFloat()函数"></a>四、parseInt()函数和parseFloat()函数</h3><p>在JavaScript中，将字符串型数据转换为数值型数据有<a href="http://www.lvyestudy.com/les_js/js_5.5.aspx">parseInt()和parseFloat()</a>这2种方法。其中，parseInt()可以将字符串转换为整型数据；parseFloat()可以将字符串转换为浮点型数据。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>parseInt() ``//将字符串型转换为整型``parseFloat() ``//将字符串型转换为浮点型</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>将字符串型转换为整型，前提是字符串一定要是数值字符串。那什么叫数值字符串呢？“123”、“3.1415”这些只有数字的字符串就是数值字符串，而“hao123”、“360cn”等就不是数值字符串。</p>
+<h3 id="五、escape函数和unescape函数"><a href="#五、escape函数和unescape函数" class="headerlink" title="五、escape函数和unescape函数"></a>五、escape函数和unescape函数</h3><p>escape()函数主要作用就是对字符串进行编码，以便它们能在所有计算机上可读。</p>
+<p><a href="http://www.lvyestudy.com/les_js/js_5.6.aspx">unescape()函数和escape()函数</a>是刚好反过来的，escape()函数是编码，unescape()函数是解码。</p>
+<p><strong>1、escape函数</strong></p>
+<p>escape()函数主要作用就是对字符串进行编码，以便它们能在所有计算机上可读。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>escape(charString)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>charString是必选参数，表示要进行编码的字符串或文字。escape()函数返回一个包含charString内容的字符串值（Unicode格式）。除了个别如“*@”之类的符号外，其余所有空格、标点符号以及其他非ASCII字符均可用“%xx”这种形式的编码代替，其中xx等于表示该字符的十六进制数。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``document.write(escape(``&quot;hello lvye!&quot;``))``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzUtNi0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript escape函数"></p>
+<p>分析：</p>
+<p>空格符对应的编码是“%20”，感叹号对应的编码是“%21”，因此执行escape(“hello lvye!”)后结果为“hello%20lvye%21”。</p>
+<p><strong>2、unescape()函数</strong></p>
+<p>escape()函数和unescape()函数是刚好反过来的，前者是编码，后者是解码。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>unescape(charString)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>charString是必选参数，表示要进行解码的字符串。unescape()函数返回指定值的ASCII字符串。与escape()函数相反，unescape()函数返回一个包含charString内容的字符串值，所有以“%xx”十六进制形式编码的字符都用ASCII字符集中等价的字符代替。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``document.write(unescape(``&quot;hello%20lvye%21&quot;``))``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzUtNi0yLnBuZw?x-oss-process=image/format,png" alt="JavaScript unescape函数"></p>
+<p>分析：</p>
+<p>空格符对应的编码是“%20”，感叹号对应的编码是“%21”，因此执行unescape(“hello%20lvye%21”)后结果为“hello lvye!”。</p>
+<h3 id="六、训练题"><a href="#六、训练题" class="headerlink" title="六、训练题"></a>六、训练题</h3><p><strong>在线escape加解密工具制作</strong></p>
+<p>代码实现如下：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516171819202122232425262728293031323334353637383940</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``&lt;title&gt;&lt;/title&gt;``  ``//定义基本样式``  ``&lt;style type=``&quot;text/css&quot;``&gt;``    ``#txt-input,#txt-output``    ``&#123;``      ``height:60px;``    ``&#125;``  ``&lt;/style&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义加密函数``    ``function</code> <code>encrypt()``    ``&#123;``      ``//获取输入框的值``      ``var</code> <code>str = document.getElementById(``&quot;txt-input&quot;``).value;``      ``//将输入框的值加密，并赋给输出框``      ``document.getElementById(``&quot;txt-ouput&quot;``).value = escape(str);``    ``&#125;``    ``//定义解密函数``    ``function</code> <code>decrypt()``    ``&#123;``      ``//获取输入框的值``      ``var</code> <code>str = document.getElementById(``&quot;txt-input&quot;``).value;``      ``//将输入框的值加密，并赋给输出框``      ``document.getElementById(``&quot;txt-ouput&quot;``).value = unescape(str);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;form&gt;``    ``&lt;textarea id=``&quot;txt-input&quot;</code> <code>cols=``&quot;20&quot;``&gt;&lt;/textarea&gt;&lt;br /&gt;``    ``&lt;input id=``&quot;btn-encrypt&quot;</code> <code>type=``&quot;button&quot;</code> <code>value=``&quot;加密&quot;</code> <code>onclick=``&quot;encrypt()&quot;``/&gt;``    ``&lt;input id=``&quot;btn-decrypt&quot;</code> <code>type=``&quot;button&quot;</code> <code>value=``&quot;解密&quot;</code> <code>onclick=``&quot;decrypt()&quot;``/&gt;``    ``&lt;input id=``&quot;Reset1&quot;</code> <code>type=``&quot;reset&quot;</code> <code>value=``&quot;清空&quot;</code> <code>/&gt;&lt;br /&gt;``    ``&lt;textarea id=``&quot;txt-ouput&quot;</code> <code>cols=``&quot;20&quot;``&gt;&lt;/textarea&gt;``  ``&lt;/form&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下（IE浏览器）：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzUtOC0yLnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>分析：</p>
+<p>（1）重置按钮的作用域是同一个form标签内部的文本框，这一点请参考“<a href="http://www.lvyestudy.com/les_hj/html_list.aspx">HTML入门教程</a>”中的“<a href="http://www.lvyestudy.com/les_hj/hj_9.8.aspx">按钮button</a>”这一节；</p>
+<p>（2）这里再次用到了document.getElementById()这一JavaScript的id选择器，这次大家打死都要记住这一个语句了，在之前都讲解了3次以上了；</p>
+<p>（3）这个在线工具逻辑已经实现，界面还比较粗糙，剩下的就交给大家润色了。</p>
+<h2 id="6、字符串对象"><a href="#6、字符串对象" class="headerlink" title="6、字符串对象"></a>6、字符串对象</h2><h3 id="一、JavaScript字符串对象简介"><a href="#一、JavaScript字符串对象简介" class="headerlink" title="一、JavaScript字符串对象简介"></a>一、JavaScript字符串对象简介</h3><p>字符串，是程序设计中经常使用的一种数据类型，在每一种编程语言中都非常非常的重要。</p>
+<p>这一章我们给大家详细地介绍JavaScript中的字符串对象string，然后给大家讲解一下各种操作字符串的技巧。有可能这些技巧一时半会你用不上，但是学习知识有一种说法是：你只有接触了某个知识点，即使将来你已经忘记了这个知识点具体是怎样的了，不过你却能想到用这么一个知识去帮你解决某些问题。但是，如果你没有接触这个知识点，你大脑是完全对这个知识没有概念，你连翻书的份都没，还谈解决什么问题？额，说得有点拗口，不过也是我作为程序猿多年的经验。</p>
+<p>字符串对象string有很多方法，例如match()方法、search()方法、replace()方法等。有可能这些方法你学了一阵子都忘记具体语法是怎样的了，其实你不要埋怨自己笨，因为不经常用的知识，我们往往都容易忘记。等你需要用到这些语法了，再回来翻翻就可以了。然后经历过多次使用了，这些语法就根深蒂固了。</p>
+<p>不过呢，在此说一下，在这一章包括之前或之后的章节，对象都有很多方法或属性，不要求每一种都掌握，但是至少我们要去看看，这样我们在以后开发中需要用到的时候，大脑“仅存”的记忆都能提醒我们要用到哪些知识点，然后我们回来翻翻就行了。</p>
+<h3 id="二、length属性简介"><a href="#二、length属性简介" class="headerlink" title="二、length属性简介"></a>二、length属性简介</h3><p>在JavaScript中，对于字符串来说，要掌握的属性就只有一个，那就是length属性。我们可以通过length属性来获取字符串的长度。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>字符串名.length</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>length属性很简单，但是在字符串操作中经常要用到，这个大家一定要记住。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str=``&quot;I love lvye!&quot;``;``    ``document.write(``&quot;字符串长度是：&quot;``+str.length);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtMi0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript字符串length属性"></p>
+<h3 id="三、match-方法简介"><a href="#三、match-方法简介" class="headerlink" title="三、match()方法简介"></a>三、match()方法简介</h3><p>在JavaScript中，使用match()方法可以从字符串内索引指定的值，或者找到一个或多个正则表达式的匹配。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>stringObject.match(字符串)  ``//匹配字符串;``stringObject.match(正则表达式) ``//匹配正则表达式</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>stringObject指的是字符串对象。match()方法类似于<a href="http://www.lvyestudy.com/les_js/js_6.3.aspx">indexOf()方法</a>，但是它返回的是指定的值，而不是字符串的位置。</p>
+<p>下面来看一个例子，大家就懂了。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str=``&quot;Hello World!&quot;``;``    ``document.write(str.match(``&quot;world&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str.match(``&quot;World&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str.match(``&quot;worlld&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str.match(``&quot;world!&quot;``));``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtMy0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript match()方法"></p>
+<p>分析：</p>
+<p>说白了，match()方法就是用来检索一个字符串是否存在。如果存在的话，返回要检索的字符串；如果不存在的话，返回null。</p>
+<h3 id="四、search-方法简介"><a href="#四、search-方法简介" class="headerlink" title="四、search()方法简介"></a>四、search()方法简介</h3><p>在JavaScript中，search() 方法用于检索字符串中指定的子字符串，或检索与<a href="http://www.lvyestudy.com/regex/regex_list.aspx">正则表达式</a>相匹配的子字符串。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>stringObject.search(字符串)   ``//检索字符串;``stringObject.search(正则表达式) ``//检索正则表达式</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>stringObject指的是字符串对象。search()方法返回的是子字符串的起始位置，如果没有找到任何匹配的子串，则返回-1。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str = ``&quot;I love lvyestudy!&quot;``;``    ``document.write(str.search(``&quot;lvye&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str.search(``&quot;html&quot;``));``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtNC0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript search()方法"></p>
+<p>分析：</p>
+<p>str.search(“lvye”)表示检索字符串”I love lvyestudy!”是否存在子字符串”lvye”，由于存在，所以返回”lvye”在字符串”I love lvyestudy!”中的起始位置7（字符串索引从0开始）。</p>
+<p>str.search(“html”)表示检索字符串”I love lvyestudy!”是否存在子字符串”html”，由于不存在，因此返回-1。</p>
+<h3 id="五、indexOf-方法简介"><a href="#五、indexOf-方法简介" class="headerlink" title="五、indexOf()方法简介"></a>五、indexOf()方法简介</h3><p>在JavaScript中，可以使用indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>stringObject.indexOf(字符串)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>stringObject表示字符串对象。indexOf()方法跟search()方法差不多，跟match()方法类似，不同的是indexOf()方法返回的是字符串的位置，而match()方法返回的是指定的字符串。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str=``&quot;Hello World!&quot;``;``    ``document.write(str. indexOf (``&quot;world&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str. indexOf (``&quot;World&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str. indexOf (``&quot;worlld&quot;``)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str. indexOf (``&quot;world!&quot;``));``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtNS0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript indexOf()方法"></p>
+<h3 id="六、replace-方法简介"><a href="#六、replace-方法简介" class="headerlink" title="六、replace()方法简介"></a>六、replace()方法简介</h3><p>在JavaScript中，replace()方法常常用于在字符串中用一些字符替换另一些字符，或者替换一个与<a href="http://www.lvyestudy.com/regex/regex_list.aspx">正则表达式</a>匹配的子串。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>stringObject.replace(原字符,替换字符)  ``stringObject.replace(正则表达式,替换字符) ``//匹配正则表达式</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str =``&quot;I love javascript!&quot;``;``    ``var</code> <code>str_new=str.replace(``&quot;javascript&quot;``,``&quot;lvyestudy&quot;``);``    ``document.write(str_new);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtNi0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript replace()方法"></p>
+<p>分析：</p>
+<p>str.replace(“javascript”,”lvyestudy”)表示用”lvyestudy”替换str中的”javascript”。</p>
+<h3 id="七、charAt-方法简介"><a href="#七、charAt-方法简介" class="headerlink" title="七、charAt()方法简介"></a>七、charAt()方法简介</h3><p>在JavaScript中，可以使用charAt()方法来获取字符串中的某一个字符。这个方法我们在之前的教程中已经多次接触了。这个方法非常好用，在实际开发中也经常用到。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>stringObject.charAt(n)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>string.Object表示字符串对象。n是数字，表示字符串中第几个字符。注意，字符串中第一个字符的下标是0，第二个字符的下标是1，以此类推。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str = ``&quot;Hello lvye!&quot;``;``    ``document.write(str.charAt(0)+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str.charAt(4));``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtNy0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript charAt()方法"></p>
+<h3 id="八、字符串英文大小写转化"><a href="#八、字符串英文大小写转化" class="headerlink" title="八、字符串英文大小写转化"></a>八、字符串英文大小写转化</h3><p>在JavaScript中，使用toLowerCase()和toUpperCase()这两种方法来转化字符串的大小写。其中，toLowerCase()方法将大写字符串转换为小写字符串；toUpperCase()将小写字符串转换为大写字符串。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>字符串名. toLowerCase()  ``//将大写字符串转换为小写字符串``字符串名. toUpperCase()  ``//将小写字符串转换为大写字符串</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>此外，还有2种大小写转化方法：toLocaleLowerCase()和toLocaleUpperCase()。这两个方法我们有可能一辈子都用不到，大家要是别的书籍中看到，可以直接忽略。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str=``&quot;Hello Wordl!&quot;``;``    ``document.write(``&quot;以正常方式显示为：&quot;``+str+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(``&quot;以小写方式显示为：&quot;``+str. toLowerCase()+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(``&quot;以大写方式显示为：&quot;``+str. toUpperCase());``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtOC0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript英文大小写转换"></p>
+<h3 id="九、连接字符串"><a href="#九、连接字符串" class="headerlink" title="九、连接字符串"></a>九、连接字符串</h3><p>在JavaScript中，可以使用concat()方法来连接2个或多个字符串。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>字符串1.concat(字符串2,字符串3,…,字符串n);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>concat()方法将“字符串2,字符串3,…,字符串n”按照顺序连接到字符串1的尾部，并返回连接后的字符串。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str1=``&quot;毛扇指千阵，&quot;``;``    ``var</code> <code>str2=``&quot;铁马踏冰河，&quot;``;``    ``var</code> <code>str3=``&quot;黄沙破楼兰。&quot;``;``    ``var</code> <code>str4=str1+str2+str3;``    ``var</code> <code>str5=str1.concat(str2,str3);``    ``document.write(str4+``&quot;&lt;br/&gt;&quot;``);``    ``document.write(str5);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtOS0xLnBuZw?x-oss-process=image/format,png" alt="JavaScript连接字符串concat()方法"></p>
+<p>分析：</p>
+<p>大家可以看到，原来连接字符串可以有2种方式，一种是使用concat()方法，另外一种更加简单，使用“+”运算符就可以了。在这里大家也明白我的良苦用心了吧。就是说，以后大家连接字符串别傻乎乎地用concat()方法，直接将字符串相加就可以了。</p>
+<h3 id="十、比较字符串"><a href="#十、比较字符串" class="headerlink" title="十、比较字符串"></a>十、比较字符串</h3><p>在javascript中，可以使用localeCompare()方法用本地特定的顺序来比较两个字符串。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>字符串1.localeCompare(字符串2)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>比较完成后，返回值是一个数字。</p>
+<p>（1）如果字符串1小于字符串2，则返回小于0的数字；</p>
+<p>（2）如果字符串1大于字符串2，则返回数字1；</p>
+<p>（3）如果字符串1等于字符串2，则返回数字0；</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str1= ``&quot;JavaScript&quot;``;``    ``var</code> <code>str2 = ``&quot;javascript&quot;``;``    ``var</code> <code>str3 = str1.localeCompare(str2);``    ``document.write(str3);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtMTAtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript localeCompare()方法"></p>
+<h3 id="十一、split-方法"><a href="#十一、split-方法" class="headerlink" title="十一、split()方法"></a>十一、split()方法</h3><p>在javascript中，可以使用split()方法把一个字符串分割成字符串数组。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>字符串.split(分割符)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>分割符可以是一个字符、多个字符或一个<a href="http://www.lvyestudy.com/regex/regex_list.aspx">正则表达式</a>。分割符并不作为返回数组元素的一部分。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str =``&quot;I love lvyestudy!&quot;``;``    ``var</code> <code>arr=``new</code> <code>Array();``    ``arr=str.split(``&quot; &quot;``);``    ``document.write(arr);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtMTEtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript分割字符串 split()方法"></p>
+<p>分析：</p>
+<p>str.split(“ “)表示字符串以空格作为分割符，而arr其实就是一个数组。。split()方法虽然简单，但是在实际开发中经常会用到，大家一定要记住喔。</p>
+<p>对于数组，我们会在数组对象那一章详细讲解。</p>
+<h3 id="十二、从字符串提取字符串"><a href="#十二、从字符串提取字符串" class="headerlink" title="十二、从字符串提取字符串"></a>十二、从字符串提取字符串</h3><p>在JavaScript中，可以使用substring()方法来提取字符串中的某一部分字符串。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>字符串.substring(开始位置,结束位置)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>开始位置是一个非负的整数，表示从哪个位置开始截取。结束位置也是一个非负的整数，表示在哪里结束截取。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>str1=``&quot;绿叶学习网JavaScript教程&quot;``;``    ``var</code> <code>str2=str1.substring(5,15);``    ``document.write(str2);``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzYtMTItMS5wbmc?x-oss-process=image/format,png" alt="JavaScript截取字符串 substring()方法"></p>
+<h2 id="7、日期对象"><a href="#7、日期对象" class="headerlink" title="7、日期对象"></a>7、日期对象</h2><h3 id="一、创建日期对象"><a href="#一、创建日期对象" class="headerlink" title="一、创建日期对象"></a>一、创建日期对象</h3><p>在JavaScript中，创建日期对象必须使用“new语句”。使用关键字new新建日期对象时，常用的有2种：</p>
+<p>方法一：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>日期对象名 = ``new</code> <code>Date();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>方法二：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>日期对象名 = ``new</code> <code>Date(日期字符串);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>方法一用于获取当前系统的时间，输出格式为如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEtMy0yLnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>方法二的日期字符串可以是以下几种形式：</p>
+<ul>
+<li>（1）”2015-5-3”</li>
+<li>（2）”May 3,2015”</li>
+<li>（3）”2015/5/3”</li>
+</ul>
+<p>其实创建日期对象不止这2种形式，不过根据个人经验，其他的创建方式大家可以直接忽略，没必要增加记忆负担。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th><code>var</code> <code>dt1 = ``new</code> <code>Date(``&quot;2015-5-3&quot;``);``var</code> <code>dt2 = ``new</code> <code>Date(``&quot;May 3,2015&quot;``);``var</code> <code>dt3 = ``new</code> <code>Date(``&quot;2015/5/3&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="二、日期对象方法"><a href="#二、日期对象方法" class="headerlink" title="二、日期对象方法"></a>二、日期对象方法</h3><p>这一章学习了很多日期对象的方法。日期对象Date的方法主要分为三大组：setXxx、getXxx和toXxx。</p>
+<p>setXxx用于设置时间和日期值；getXxx用于获取时间和日期值；toXxxx主要是将日期转换为指定格式。</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">getFullYear()</td>
+<td align="left">返回一个表示年份的4位数字</td>
+</tr>
+<tr>
+<td align="left">getMonth()</td>
+<td align="left">返回值是0（一月）到11（十二月）之间的一个整数</td>
+</tr>
+<tr>
+<td align="left">getDate()</td>
+<td align="left">返回值是1~31之间的一个整数</td>
+</tr>
+<tr>
+<td align="left">getHours()</td>
+<td align="left">返回值是0~23之间的一个整数，来表示小时数</td>
+</tr>
+<tr>
+<td align="left">getMinutes()</td>
+<td align="left">返回值是0~59之间的一个整数，来表示分钟数</td>
+</tr>
+<tr>
+<td align="left">getSeconds()</td>
+<td align="left">返回值是0~59之间的一个整数，来表示秒数</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">setFullYear()</td>
+<td align="left">可以设置年、月、日</td>
+</tr>
+<tr>
+<td align="left">setMonth()</td>
+<td align="left">可以设置月、日</td>
+</tr>
+<tr>
+<td align="left">setDate()</td>
+<td align="left">可以设置日数</td>
+</tr>
+<tr>
+<td align="left">setHours()</td>
+<td align="left">可以设置时、分、秒、毫秒</td>
+</tr>
+<tr>
+<td align="left">setMinutes()</td>
+<td align="left">可以设置分、秒、毫秒</td>
+</tr>
+<tr>
+<td align="left">setSeconds()</td>
+<td align="left">可以设置秒、毫秒</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">toString()</td>
+<td align="left">将日期时间转换为普通字符串</td>
+</tr>
+<tr>
+<td align="left">toUTCString()</td>
+<td align="left">将日期时间转换为世界时间（UTC）格式的字符串</td>
+</tr>
+<tr>
+<td align="left">toLocaleString()</td>
+<td align="left">将日期时间转换为本地时间格式的字符串</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
 </search>

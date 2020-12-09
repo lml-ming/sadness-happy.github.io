@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"workhardjun.com","root":"/","images":"/images","scheme":"Pisces","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="JavaScript高级">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript">
+<meta property="og:url" content="http://workhardjun.com/2019/11/23/JavaScript%E9%AB%98%E7%BA%A7/index.html">
+<meta property="og:site_name" content="等来清晨">
+<meta property="og:description" content="JavaScript高级">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMi5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMy5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItNC5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTMtMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTMtMi5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTUtMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMi5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMy5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtNC5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtNS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMi5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMy5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEyLTgtMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEzLTQtMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEzLTQtMi5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMi5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMy5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItNC5wbmc?x-oss-process=image/format,png">
+<meta property="article:published_time" content="2019-11-23T01:16:46.000Z">
+<meta property="article:modified_time" content="2020-12-09T03:36:01.397Z">
+<meta property="article:author" content="等来清晨">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMS5wbmc?x-oss-process=image/format,png">
+
+
+<link rel="canonical" href="http://workhardjun.com/2019/11/23/JavaScript%E9%AB%98%E7%BA%A7/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>javascript | 等来清晨</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">等来清晨</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="fa fa-home   //首页 fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-日期表">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日期表</a>
+
+  </li>
+        <li class="menu-item menu-item-站点地图">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-公益404">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript%E9%AB%98%E7%BA%A7"><span class="nav-number">1.</span> <span class="nav-text">JavaScript高级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%8A%A8%E6%80%81%E6%94%B9%E5%8F%98%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、动态改变页面内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%8A%A8%E6%80%81%E6%94%B9%E5%8F%98%E7%BD%91%E9%A1%B5%E7%9A%84%E5%A4%96%E8%A7%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、动态改变网页的外观</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E9%AA%8C%E8%AF%81%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、验证表单数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%93%8D%E5%BA%94%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、响应事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">三、内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">1、数组对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80"><span class="nav-number">2.1.1.</span> <span class="nav-text">一、数组基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.2.</span> <span class="nav-text">二、数组的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%95%B0%E5%80%BC%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.</span> <span class="nav-text">2、数值对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.3.</span> <span class="nav-text">3、窗口对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1%E7%AE%80%E4%BB%8B"><span class="nav-number">2.3.1.</span> <span class="nav-text">一、窗口对象简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD%E7%AA%97%E5%8F%A3"><span class="nav-number">2.3.2.</span> <span class="nav-text">二、打开和关闭窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%94%B9%E5%8F%98%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F"><span class="nav-number">2.3.3.</span> <span class="nav-text">三、改变窗口大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%AA%97%E5%8F%A3%E5%8E%86%E5%8F%B2"><span class="nav-number">2.3.4.</span> <span class="nav-text">四、窗口历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="nav-number">2.3.5.</span> <span class="nav-text">五、定时器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81JavaScript%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="nav-number">2.4.</span> <span class="nav-text">4、JavaScript对话框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81alert"><span class="nav-number">2.4.1.</span> <span class="nav-text">一、alert()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81confirm"><span class="nav-number">2.4.2.</span> <span class="nav-text">二、confirm()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81prompt"><span class="nav-number">2.4.3.</span> <span class="nav-text">三、prompt()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.5.</span> <span class="nav-text">5、文档对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81document%E5%AF%B9%E8%B1%A1%E7%AE%80%E4%BB%8B"><span class="nav-number">2.5.1.</span> <span class="nav-text">一、document对象简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%AE%AD%E7%BB%83%E9%A2%98%EF%BC%881%EF%BC%89%E7%BD%91%E9%A1%B5%E5%8A%A8%E6%80%81%E6%A0%87%E9%A2%98"><span class="nav-number">2.5.2.</span> <span class="nav-text">二、训练题（1）网页动态标题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81DOM%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.6.</span> <span class="nav-text">5、DOM对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81DOM%E8%8A%82%E7%82%B9%E5%B1%9E%E6%80%A7"><span class="nav-number">2.6.1.</span> <span class="nav-text">一、DOM节点属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81DOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"><span class="nav-number">2.6.2.</span> <span class="nav-text">二、DOM节点操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81JavaScript%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.7.</span> <span class="nav-text">6、JavaScript对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BA%8B%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">2.7.1.</span> <span class="nav-text">一、事件是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81JavaScript%E4%BA%8B%E4%BB%B6"><span class="nav-number">2.7.2.</span> <span class="nav-text">二、JavaScript事件</span></a></li></ol></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="等来清晨"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">等来清晨</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://workhardjun.com/2019/11/23/JavaScript%E9%AB%98%E7%BA%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="等来清晨">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="等来清晨">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          javascript
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-11-23 09:16:46" itemprop="dateCreated datePublished" datetime="2019-11-23T09:16:46+08:00">2019-11-23</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-12-09 11:36:01" itemprop="dateModified" datetime="2020-12-09T11:36:01+08:00">2020-12-09</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="JavaScript高级"><a href="#JavaScript高级" class="headerlink" title="JavaScript高级"></a>JavaScript高级</h1><a id="more"></a>
+
+<p>HTML页面是静态的，而JavaScript可以弥补HTML语言的缺陷，实现Web页面客户端的动态效果。JavaScript的作用有以下几点：</p>
+<h3 id="1、动态改变页面内容"><a href="#1、动态改变页面内容" class="headerlink" title="1、动态改变页面内容"></a>1、动态改变页面内容</h3><p>HTML页面是静态的，一旦编写，内容是无法改变的。JavaScript可以弥补这个不足，可以将内容动态地显示在网页中。</p>
+<h3 id="2、动态改变网页的外观"><a href="#2、动态改变网页的外观" class="headerlink" title="2、动态改变网页的外观"></a>2、动态改变网页的外观</h3><p>JavaScript通过修改网页元素的CSS样式，达到动态地改变网页的外观。</p>
+<h3 id="3、验证表单数据"><a href="#3、验证表单数据" class="headerlink" title="3、验证表单数据"></a>3、验证表单数据</h3><p>我们常见的在各大网站中的注册中的验证功能，就是JavaScript实现的。</p>
+<h3 id="4、响应事件"><a href="#4、响应事件" class="headerlink" title="4、响应事件"></a>4、响应事件</h3><p>JavaScript是基于事件的语言。例如点击一个按钮弹出一个对话框，就是鼠标点击触发的事件，例如绿叶学习网教程文章中的点赞效果：</p>
+<p>对于JavaScript的理解，就一句话：如果没有使用JavaScript，网页就是静态的，唯一的功能就是给用户浏览。加入了JavaScript，网页变得绚丽多彩起来。</p>
+<h1 id="三、内容"><a href="#三、内容" class="headerlink" title="三、内容"></a>三、内容</h1><h2 id="1、数组对象"><a href="#1、数组对象" class="headerlink" title="1、数组对象"></a>1、数组对象</h2><h3 id="一、数组基础"><a href="#一、数组基础" class="headerlink" title="一、数组基础"></a>一、数组基础</h3><p><strong>1、数组是什么？</strong></p>
+<p>在JavaScript中，我们可以使用“数组”来存储一组“相同数据类型”的数据结构。</p>
+<p><strong>2、创建数组</strong></p>
+<p>在JavaScript中，创建数组共有3种方法：</p>
+<p>（1）新建一个长度为0的数组</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>myArr = ``new</code> <code>Array();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（2）新建长度为n的数组</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234</th>
+<th><code>var</code> <code>myArr = ``new</code> <code>Array(3);``myArr[0]=``&quot;HTML&quot;``;``myArr[1]=``&quot;CSS&quot;``;``myArr[2]=``&quot;JavaScript&quot;``;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（3）新建指定长度的数组，并赋值</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>myArr = ``new</code> <code>Array(1,2,3,4);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>注意，在JavaScript中，数组的索引是从0开始的，而不是从1开始的。</p>
+<p><strong>3、数组元素的赋值与获取</strong></p>
+<p>在JavaScript中，数组元素的赋值与获取都是通过数组下标来实现。</p>
+<h3 id="二、数组的属性和方法"><a href="#二、数组的属性和方法" class="headerlink" title="二、数组的属性和方法"></a>二、数组的属性和方法</h3><p><strong>1、数组的属性</strong></p>
+<p>在Array对象中有3个属性，分别是length、constructor和prototype。在初学者阶段，我们仅仅掌握length这个属性就可以了。</p>
+<p><strong>2、数组的方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">slice()</td>
+<td align="left">获取数组中的某段数组元素</td>
+</tr>
+<tr>
+<td align="left">unshift()</td>
+<td align="left">在数组开头添加元素</td>
+</tr>
+<tr>
+<td align="left">push()</td>
+<td align="left">在数组末尾添加元素</td>
+</tr>
+<tr>
+<td align="left">shift()</td>
+<td align="left">删除数组中第一个元素</td>
+</tr>
+<tr>
+<td align="left">pop()</td>
+<td align="left">删除数组最后一个元素</td>
+</tr>
+<tr>
+<td align="left">toString()</td>
+<td align="left">将数组转换为字符串</td>
+</tr>
+<tr>
+<td align="left">join()</td>
+<td align="left">将数组元素连接成字符串</td>
+</tr>
+<tr>
+<td align="left">concat()</td>
+<td align="left">多个数组连接为字符串</td>
+</tr>
+<tr>
+<td align="left">sort()</td>
+<td align="left">数组元素正向排序</td>
+</tr>
+<tr>
+<td align="left">reverse()</td>
+<td align="left">数组元素反向排序</td>
+</tr>
+</tbody></table>
+<h2 id="2、数值对象"><a href="#2、数值对象" class="headerlink" title="2、数值对象"></a>2、数值对象</h2><p>下面都是这一章所讲解到的Math对象比较重要的方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">max(x,y)</td>
+<td align="left">返回x和y中的最大值</td>
+</tr>
+<tr>
+<td align="left">min(x,y)</td>
+<td align="left">返回x和y中的最小值</td>
+</tr>
+<tr>
+<td align="left">pow(x,y)</td>
+<td align="left">返回x的y次幂</td>
+</tr>
+<tr>
+<td align="left">abs(x)</td>
+<td align="left">返回数的绝对值</td>
+</tr>
+<tr>
+<td align="left">round(x)</td>
+<td align="left">把数四舍五入为最接近的整数</td>
+</tr>
+<tr>
+<td align="left">random()</td>
+<td align="left">返回0~1之间的随机数</td>
+</tr>
+<tr>
+<td align="left">ceil(x)</td>
+<td align="left">对一个数进行上舍入</td>
+</tr>
+<tr>
+<td align="left">floor(x)</td>
+<td align="left">对一个数进行下舍入</td>
+</tr>
+</tbody></table>
+<h2 id="3、窗口对象"><a href="#3、窗口对象" class="headerlink" title="3、窗口对象"></a>3、窗口对象</h2><p>现在大家都知道了，假如我们要学习一个“XXX对象”，那肯定学习它的属性和方法。window对象也是同样的道理。</p>
+<p>关于window对象的属性很多，但是我们在<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_list.aspx">JavaScript入门</a>阶段一个都用不着！所以这一章大家只需要认真掌握window对象的方法即可。</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">open()、close()</td>
+<td align="left">打开窗口、关闭窗口</td>
+</tr>
+<tr>
+<td align="left">resizeBy()、resizeTo()</td>
+<td align="left">改变窗口大小</td>
+</tr>
+<tr>
+<td align="left">moveBy()、moveTo()</td>
+<td align="left">移动窗口</td>
+</tr>
+<tr>
+<td align="left">setTimeout()、clearTimeout()</td>
+<td align="left">设置或取消“一次性”执行的定时器</td>
+</tr>
+<tr>
+<td align="left">setInterval()、clearInterval()</td>
+<td align="left">设置或取消“重复性”执行的定时器</td>
+</tr>
+</tbody></table>
+<h3 id="一、窗口对象简介"><a href="#一、窗口对象简介" class="headerlink" title="一、窗口对象简介"></a>一、窗口对象简介</h3><p>之前几个章节都是JavaScript的基础部分，大家要真想掌握JavaScript，就必须得把基础给打扎实。这一章我们进入JavaScript的核心技术，其实核心技术部分也是比较简单的，大家不要一看到就退缩。</p>
+<p>在之前我们接触过很多JavaScript对象，例如什么<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_8.1.aspx">数组对象Array</a>、<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_7.1.aspx">日期对象Date</a>等。.这一章我们来学习JavaScript最核心的对象之一：window对象。</p>
+<p>在JavaScript中，一个浏览器窗口就是一个window对象。window对象主要用来控制由窗口弹出的对话框、打开窗口或关闭窗口、控制窗口的大小和位置等等。一句话，window对象就是用来操作“浏览器窗口”的一个对象。</p>
+<p><strong>1、window对象属性</strong></p>
+<p>市面上很多教程在讲解window、document等对象时，不管是常用的还是不常用的属性和方法，先一上来就帮你全部列出来，读者看得头都大。其实在JavaScript入门阶段，对于window对象的属性和方法，我们只需要掌握一些常用的就行，其他需要深入的我们在JavaScript进阶再给大家详细探讨。</p>
+<p>关于window对象的属性很多，但是我们在<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_list.aspx">JavaScript入门教程</a>阶段一个都用不着！所以这一章大家只需要认真掌握window对象的方法即可。</p>
+<p><strong>2、window对象方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">open()、close()</td>
+<td align="left">打开窗口、关闭窗口</td>
+</tr>
+<tr>
+<td align="left">resizeBy()、resizeTo()</td>
+<td align="left">改变窗口大小</td>
+</tr>
+<tr>
+<td align="left">moveBy()、moveTo()</td>
+<td align="left">移动窗口</td>
+</tr>
+<tr>
+<td align="left">setTimeout()、clearTimeout()</td>
+<td align="left">设置或取消“一次性”执行的定时器</td>
+</tr>
+<tr>
+<td align="left">setInterval()、clearInterval()</td>
+<td align="left">设置或取消“重复性”执行的定时器</td>
+</tr>
+</tbody></table>
+<p>上面，我把window对象属性去掉，并且筛选出最常用的方法。在JavaScript入门之时，只需要掌握这些就已经足够我们走很远了。</p>
+<h3 id="二、打开和关闭窗口"><a href="#二、打开和关闭窗口" class="headerlink" title="二、打开和关闭窗口"></a>二、打开和关闭窗口</h3><p>在JavaScript中，打开和关闭新的窗口，这是很常见的一种操作。</p>
+<p>在绿叶学习网的JavaScript在线测试工具中，当点击“调试代码”按钮时，就会打开一个新的窗口，并把HTML文档输出到新的页面中去。这里面涉及的方法，就是这一节我们要说到的“使用JavaScript打开和关闭窗口”。</p>
+<p><strong>1、JavaScript打开窗口</strong></p>
+<p>在JavaScript中，我们可以使用window对象中的open()方法来打开一个新窗口。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(URL, 窗口名称, 参数);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>URL：指的是打开窗口的地址，如果URL为空字符串，则浏览器打开一个空白窗口，并且可以使用document.write()方法动态输出HTML文档。</p>
+<p>窗口名称：指的是window对象的名称，可以是a标签或form标签中target属性值。如果指定的名称是一个已经存在的窗口名称，则返回对该窗口的引用，而不会再新打开一个窗口。</p>
+<p>参数：对打开的窗口进行属性设置。</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">top</td>
+<td align="left">窗口顶部距离屏幕顶部的距离，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">left</td>
+<td align="left">窗口左边距离屏幕左边的距离，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">窗口的宽度，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">窗口的高度，默认单位为px</td>
+</tr>
+<tr>
+<td align="left">scrollbars</td>
+<td align="left">是否显示滚动条</td>
+</tr>
+<tr>
+<td align="left">resizable</td>
+<td align="left">窗口大小是否固定</td>
+</tr>
+<tr>
+<td align="left">toolbar</td>
+<td align="left">浏览器工具条，包括前进或后退按钮</td>
+</tr>
+<tr>
+<td align="left">menubar</td>
+<td align="left">菜单条，一般包括文件、编辑及其它一些条目</td>
+</tr>
+<tr>
+<td align="left">location</td>
+<td align="left">地址栏，是可以输入URL的浏览器文本区</td>
+</tr>
+<tr>
+<td align="left">location</td>
+<td align="left">地址栏，是可以输入URL的浏览器文本区</td>
+</tr>
+</tbody></table>
+<p>这些可选参数都不是那么常用，大家不记住也没啥关系，以后需要的时候回到这里查询一下就OK了。</p>
+<p>下面举几个常用的窗口打开的例子：</p>
+<p>（1）打开一个新窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com&quot;``,``&quot;&quot;``,``&quot;&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>上面是打开一个新窗口，并且在新窗口加载绿叶学习网首页。</p>
+<p>（2）打开一个指定位置的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;top=200,left=200&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（3）打开一个指定大小的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;width=200,height=200&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（4）打开一个固定大小的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;width=200,height=200,resizable&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（5）打开一个显示滚动条的窗口：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.open(``&quot;http://www.lvyestudy.com &quot;``,``&quot;&quot;``,``&quot;width=200,height=200,scrollbars&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>openWindow() &#123;``      ``window.open(``&quot;http://www.lvyestudy.com &quot;``, ``&quot;&quot;``, ``&quot;width=200,height=200,resizable&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input id=``&quot;btn&quot;</code> <code>type=``&quot;button&quot;</code> <code>value=``&quot;打开窗口&quot;</code> <code>onclick=``&quot;openWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMS5wbmc?x-oss-process=image/format,png" alt="JavaScript打开窗口"></p>
+<p>分析：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMi5wbmc?x-oss-process=image/format,png" alt="JavaScript window.open()"></p>
+<p>此外还需要注意一点，window.open()方法中的参数width和height设置的时候是不需要加单位（px）的，浏览器默认就已经给我们添加单位。</p>
+<p><strong>2、JavaScript关闭窗口</strong></p>
+<p>在JavaScript中，我们可以使用window对象中的close()方法来关闭一个窗口。</p>
+<p>（1）、关闭当前窗口</p>
+<p>在JavaScript中，如果想要关闭当前的窗口，有3种方式：</p>
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th><code>window.close();``close();``this``.close();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（2）、关闭子窗口</p>
+<p>所谓的“关闭子窗口”就是关闭之前使用window.open()方法动态创建的子窗口。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>窗口名.close();</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>使用window.open()方法动态创建的窗口时，我们可以将窗口以变量形式保存，然后再使用close()方法关闭动态创建的窗口。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>newWindow = window.open(``&quot;http://www.lvyestudy.com&quot;``,``&quot;&quot;``,``&quot;width=200,height=200&quot;``);``    ``function</code> <code>closeWindow()``    ``&#123;``      ``newWindow.close();``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;关闭窗口&quot;</code> <code>onclick=``&quot;closeWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItMy5wbmc?x-oss-process=image/format,png" alt="JavaScript关闭窗口">父窗口</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTItNC5wbmc?x-oss-process=image/format,png" alt="JavaScript window.close()">子窗口</p>
+<p>分析：</p>
+<p>你会看到，浏览器会打开2个窗口。当我们点击“关闭窗口”按钮后，被打开的“子窗口”就会被关闭。</p>
+<h3 id="三、改变窗口大小"><a href="#三、改变窗口大小" class="headerlink" title="三、改变窗口大小"></a>三、改变窗口大小</h3><p>在JavaScript中，可以使用window对象的resizeTo()方法或resizeBy()方法来改变窗口的大小。</p>
+<p><strong>1、resizeTo()方法</strong></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.resizeTo(x, y)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>x表示改变后的水平宽度，y表示改变后的垂直高度。x和y的单位都是px，浏览器自带单位，我们只需要使用数值即可。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>resizeWindow()``    ``&#123;``      ``window.resizeTo(200,200);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;改变大小&quot;</code> <code>onclick=``&quot;resizeWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTMtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript resizeTo()方法"></p>
+<p>分析：</p>
+<p>当我们点击“改变大小”按钮之后，当前窗口的的宽度为200px，而高度变为200px。注意resizeTo(x,y)方法中的x和y是不需要加px作为单位的，因为浏览器默认已经带有px作为单位。</p>
+<p><strong>2、resizeBy()方法</strong></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>window.resizeBy(x, y)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>当x、y的值大于0时为扩大，小于0时为缩小。其中x和y的单位都是px。</p>
+<p>x表示窗口水平方向每次扩大或缩小的数值，y表示垂直方向窗口每次扩大或缩小的数值。</p>
+<p>resizeTo(x,y)与resizeBy(x,y)不同在于：resizeTo(x,y)中的x、y是“改变后”的数值，而resizeBy(x,y)中的x、y是“增加或减少”的数值。“to”表示一个结果，“by”表示一个过程，大家好好琢磨“to”和“by”的英文含义就懂了。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415161718</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>resizeToWindow() &#123;``      ``window.resizeTo(200,200);``    ``&#125;``    ``function</code> <code>resizeByWindow() &#123;``      ``window.resizeBy(50,50);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;resizeTo&quot;</code> <code>onclick=``&quot;resizeToWindow()&quot;``/&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>value=``&quot;resizeBy&quot;</code> <code>onclick=``&quot;resizeByWindow()&quot;``/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTMtMi5wbmc?x-oss-process=image/format,png" alt="JavaScript resizeBy()方法"></p>
+<p>分析：</p>
+<p>我们首先点击“resizeTo”按钮把当前窗口宽度设置为200px，而高度也设置为200px。然后每当我们点击1次“resizeBy”按钮，我们会发现当前窗口的宽度和高度都会增加50px。这样都是由于window.resizeBy(50,50)的结果。</p>
+<h3 id="四、窗口历史"><a href="#四、窗口历史" class="headerlink" title="四、窗口历史"></a>四、窗口历史</h3><p>平常在使用浏览器当中，我们都会经常使用浏览器中的“前进”和“后退”。其实浏览器都会帮我们保存浏览的历史（即窗口历史）。那么在JavaScript中，我们该如何来操作这些窗口历史呢？</p>
+<p>在JavaScript中，我们使用window对象中的history对象进行访问窗口历史。很多人对“window对象中的history对象”这一句不太理解，其实“对象里面也可以有子对象”的。看过JSON教程的读者都知道，我们可以在一个对象里面再定义一个子对象。</p>
+<p>我们在JavaScript进阶教程的“JavaScript对象”这一节再详细为大家探讨。</p>
+<p>既然提到对象，那肯定少不了还是按照“对象的属性”和“对象的方法”这两个套路来给大家讲解了。</p>
+<p><strong>1、history对象属性</strong></p>
+<p>在JavaScript中，hisotry对象常用的属性如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">current</td>
+<td align="left">当前窗口的URL</td>
+</tr>
+<tr>
+<td align="left">next</td>
+<td align="left">历史列表中的下一个URL</td>
+</tr>
+<tr>
+<td align="left">previous</td>
+<td align="left">历史列表中的前一个URL</td>
+</tr>
+<tr>
+<td align="left">length</td>
+<td align="left">历史列表的长度，用于判断列表中的入口数目</td>
+</tr>
+</tbody></table>
+<p>这些history对象属性比较少用，大家看一下就可以了。</p>
+<p><strong>2、history对象方法</strong></p>
+<p>在JavaScript中，hisotry对象常用的方法如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">go()</td>
+<td align="left">进入指定的网页</td>
+</tr>
+<tr>
+<td align="left">back()</td>
+<td align="left">返回上一页</td>
+</tr>
+<tr>
+<td align="left">forward()</td>
+<td align="left">进入下一页</td>
+</tr>
+</tbody></table>
+<p>我们常见的“上一页”与“下一页”实现代码如下：</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.forward();&quot;``&gt;下一页&lt;/a&gt;``&lt;a href=``&quot;javascript:window.history.back();&quot;``&gt;上一页&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>注意一下，这种“上一页”与“下一页”是针对浏览器历史记录而言，不能用来制作类似绿叶学习网那种分页特效。两者是完全不同的概念！</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTUtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript窗口历史">分页效果</p>
+<p>当然，我们还可以使用hisotry.go()方法指定要访问的历史记录。若参数为正数，则向前移动；若参数为负数，则向后移动，例如：</p>
+<table>
+<thead>
+<tr>
+<th>12</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.go(-1);&quot;``&gt;向后退1次&lt;/a&gt;``&lt;a href=``&quot;javascript:window.history.back(2);&quot;``&gt;向后前进2次&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>使用history.length属性能够访问history数组的长度，可以很容易地转移到列表的末尾，例如：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.length-1;&quot;``&gt;末尾&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在JavaScript中，操作窗口历史语法很简单，也不是那么常用。一般情况下，在404页面中，为了用户体验，往往会有一个提供“返回上一页”的选项，这其中就用到了下面这种语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>&lt;a href=``&quot;javascript:window.history.go(-1);&quot;``&gt;返回上一页&lt;/a&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>由于窗口历史必须在实际环境才会有效，即使提供在线测试也不会有效果，请大家自行在本地测试。</p>
+<h3 id="五、定时器"><a href="#五、定时器" class="headerlink" title="五、定时器"></a>五、定时器</h3><p>什么叫定时器？我们可以看到绿叶学习网首页有一个“图片轮播”特效，每隔2s图片变换一次，这里就用到了定时器。啊，定时器，太重要了！天塌下来，大家都要扛着把它学会先。</p>
+<p>定时器用途非常广，在图片轮播、在线时钟、弹窗广告等地方大显身手。凡是自动执行的东西，很大可能都是跟定时器有关。</p>
+<p>在JavaScript中，关于定时器的实现，我们有2组方法：</p>
+<ul>
+<li>（1）setTimeout()和clearTimeout()；</li>
+<li>（2）setInterval()和clearInterval()；</li>
+</ul>
+<p>这一节的例子使用“在线测试”不会有效果，请大家自行把代码复制到本地编辑器进行测试预览。下面我们详细分析这2组方法的用法与不同。</p>
+<p><strong>1、setTimeout()和clearTimeout()</strong></p>
+<p>在JavaScript中，我们可以使用setTimeout()方法来设置“一次性”调用的函数。其中clearTimeout()可以用来取消执行setTimeout()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>变量名 = setTimeout(code , time);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数code可以是一段代码，也可以是一个调用的函数名；</p>
+<p>参数time表示时间，表示要过多长时间才执行code中的内容，单位为毫秒。</p>
+<p>举例：参数code是一段代码</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``window.onload = ``function</code> <code>() &#123;``      ``setTimeout(``&quot;alert(&#39;欢迎来到绿叶学习网&#39;);&quot;``, 2000);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;2秒后提示欢迎语。&lt;/p&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMS5wbmc?x-oss-process=image/format,png" alt="setTimeout()和clearTimeout()"></p>
+<p>分析：</p>
+<p>打开页面2秒后，浏览器会弹出欢迎语。由于setTimeout()方法只会执行一次，所以只会弹出一次对话框。弹出对话框如下图：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMi5wbmc?x-oss-process=image/format,png" alt="JavaScript定时器"></p>
+<p>举例2：参数code是一个函数名</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``window.onload = ``function</code> <code>() &#123;``      ``setTimeout(``&quot;welcome()&quot;``, 2000);``    ``&#125;``    ``function</code> <code>welcome() &#123;``      ``alert(``&quot;欢迎来到绿叶学习网&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;2秒后提示欢迎语。&lt;/p&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtMy5wbmc?x-oss-process=image/format,png" alt="JavaScript setTimeout()和clearTimeout()"></p>
+<p>分析：</p>
+<p>举例1和举例2实际效果是相同的，只不过参数code不一样罢了。</p>
+<p><strong>2、setInterval()和clearInterval()</strong></p>
+<p>在JavaScript中，我们可以使用setInterval()方法来设置“重复性”调用的函数。其中clearInterval()可以用来取消执行setTimeout()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>var</code> <code>变量名 = setInterval (code , time);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数code可以是一段代码，也可以是一个调用的函数名；</p>
+<p>参数time表示时间，表示要过多长时间才执行code中的内容，单位为毫秒。</p>
+<p>setTimeout()方法与setInterval()方法的语法很相似，实际上这两者在用法方面区别非常大。其中setTimeout()方法内的代码只会执行一次，而setInterval()方法内的代码会重复性执行，除非你使用clearInterval()方法来取消执行。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516171819202122232425</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义全局变量，用于记录秒数``    ``var</code> <code>n = 5;``    ``window.onload = ``function</code> <code>() &#123;``      ``//设置定时器，重复执行函数countDown()``      ``var</code> <code>t = setInterval(``&quot;countDown()&quot;``, 1000);``    ``&#125;``    ``//定义函数``    ``function</code> <code>countDown() &#123;``      ``//判断n是否大于0，因为倒计时不可能有负数``      ``if</code> <code>(n &gt; 0)&#123;``        ``n--;``        ``document.getElementById(``&quot;num&quot;``).innerHTML = n;``      ``&#125;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;新年倒计时：&lt;span id=``&quot;num&quot;``&gt;5&lt;/span&gt;&lt;/p&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtNC5wbmc?x-oss-process=image/format,png" alt="setInterval()和clearInterval()"></p>
+<p>分析：</p>
+<p>window.onload表示在页面加载完毕执行，在“<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_14.7.aspx">JavaScript页面相关事件</a>”我们会详细讲解到。</p>
+<p>setInterval()方法会重复执行某一段代码或函数。如果这个例子使用setTimeout方法就不能实现了，因为setTimeout()方法只会执行一次，而setInterval()会重复执行。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213141516171819202122232425262728293031323334</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义全局变量，用于记录秒数``    ``var</code> <code>n = 0;``    ``window.onload = ``function</code> <code>() &#123;``      ``//设置定时器，重复执行函数add()``      ``var</code> <code>t = setInterval(``&quot;add()&quot;``, 1000);``      ``//点击“暂停”按钮事件``      ``document.getElementById(``&quot;btn_pause&quot;``).onclick = ``function</code> <code>() &#123;``        ``clearInterval(t);``      ``&#125;``      ``//点击“继续”按钮事件``      ``document.getElementById(``&quot;btn_continue&quot;``).onclick = ``function</code> <code>() &#123;``        ``if</code> <code>(confirm(``&quot;你还要继续装逼？&quot;``))&#123;``          ``t = setInterval(``&quot;add()&quot;``, 1000);``        ``&#125;``      ``&#125;``    ``&#125;``    ``//定义计时函数``    ``function</code> <code>add() &#123;``      ``n++;``      ``document.getElementById(``&quot;num&quot;``).innerHTML = n;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;p&gt;你已经装了&lt;span id=``&quot;num&quot;``&gt;0&lt;/span&gt;秒的“逼”，赶紧暂停吧！&lt;/p&gt;``  ``&lt;input id=``&quot;btn_pause&quot;</code> <code>value=``&quot;暂停&quot;</code> <code>type=``&quot;button&quot;``/&gt;``  ``&lt;input id=``&quot;btn_continue&quot;</code> <code>value=``&quot;继续&quot;</code> <code>type=``&quot;button&quot;</code> <code>/&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEwLTYtNS5wbmc?x-oss-process=image/format,png" alt="JavaScript setInterval()和clearInterval()"></p>
+<p>分析：</p>
+<p>这里我做了一个小程序，其中使用setInterval()方法重复执行计时函数，并且利用按钮点击事件配合clearInterval()方法来进行“暂停”。</p>
+<p>对于初学者来说，这个程序可能有点复杂，涉及了JavaScript对话框、DOM操作和JavaScript事件。请大家学习了后续课程再来看看。</p>
+<p>这一节，我们把定时器的语法简单给大家做个介绍，在后面课程或者以后开发中，你们会经常见到定时器的身影。</p>
+<p><em></em>总结</p>
+<p>1、在JavaScript中，关于定时器的实现，我们有2组方法：</p>
+<ul>
+<li>（1）setTimeout()和clearTimeout()；</li>
+<li>（2）setInterval()和clearInterval()；</li>
+</ul>
+<p>2、setTimeout()方法内的代码只会执行一次，而setInterval()方法内的代码会重复性执行。</p>
+<h2 id="4、JavaScript对话框"><a href="#4、JavaScript对话框" class="headerlink" title="4、JavaScript对话框"></a>4、JavaScript对话框</h2><p>在JavaScript中，对话框共有3种，这3种对话框分别使用以下3种方法定义：</p>
+<ul>
+<li>（1）alert()；</li>
+<li>（2）confirm()；</li>
+<li>（3）prompt()；</li>
+</ul>
+<p>其中前两种用得比较多，最后一种在实际开发中用得比较少。</p>
+<h3 id="一、alert"><a href="#一、alert" class="headerlink" title="一、alert()"></a>一、alert()</h3><p>在JavaScript中，我们可以使用<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_10.1.aspx">window对象</a>中的<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_11.2.aspx">alert()方法</a>来弹出一个提示框。该对话框效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript alert()方法"></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>alert(message)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>该对话框只是用于提示，并不能对JavaScript脚本产生任何影响。message是必选参数，即提示框的信息，这是一个字符串。alert()方法没有返回值。</p>
+<h3 id="二、confirm"><a href="#二、confirm" class="headerlink" title="二、confirm()"></a>二、confirm()</h3><p>在JavaScript中，<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_11.3.aspx">confirm()方法</a>对话框一般用于确认信息，它只有一个参数，返回值为true或false。该对话框效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMi5wbmc?x-oss-process=image/format,png" alt="JavaScript confirm()方法"></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>confirm(message)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>message是必选项，表示弹出对话框中的文本，这是一个字符串。如果用户点击“确定”，则confirm()返回true。如果用户点击“取消”按钮，则confirm()返回false。confirm()方法往往都是和按钮结合使用。</p>
+<h3 id="三、prompt"><a href="#三、prompt" class="headerlink" title="三、prompt()"></a>三、prompt()</h3><p>在JavaScript中，prompt()方法对话框用于输入并返回用户输入的字符串。该对话框效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzExLTUtMy5wbmc?x-oss-process=image/format,png" alt="JavaScript prompt()方法"></p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>prompt(message);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数message表示对话框提示内容，这是一个字符串。</p>
+<p><em></em>总结</p>
+<p>1、这3种对话框特点如下：</p>
+<p>（1）alert()：仅有提示文字，没有返回值；</p>
+<p>（2）confirm()：具有提示文字，返回“布尔值”（true或false）；</p>
+<p>（3）prompt()：具有提示文字，返回“字符串”；</p>
+<h2 id="5、文档对象"><a href="#5、文档对象" class="headerlink" title="5、文档对象"></a>5、文档对象</h2><h3 id="一、document对象简介"><a href="#一、document对象简介" class="headerlink" title="一、document对象简介"></a>一、document对象简介</h3><p>前两章，我们已经把window对象详细给大家探讨了一遍。这次我们介绍另一个网页中核心的对象：“document对象”。注意，document对象是window对象中的子对象。</p>
+<p>谈到document对象，其实我们在之前的课程中已经接触很多次了。还记得document.write()吗？这就是document对象的一个方法。</p>
+<p>document对象除了write()方法外，跟其他对象一样，也有自身一套属性和方法。</p>
+<p>document对象，即文档对象。顾名思义，其实很好理解，文档对象嘛，操作的都是HTML文档。为了更好理解什么叫“HTML文档”，请看一下<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_cj/css_list.aspx">CSS入门教程</a>中“<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_cj/cj_12.1.aspx">正常文档流</a>”这一节。</p>
+<p><strong>1、document对象属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left">文档标题，即title标签内容</td>
+</tr>
+<tr>
+<td align="left">URL</td>
+<td align="left">文档地址</td>
+</tr>
+<tr>
+<td align="left">fileCreateDate</td>
+<td align="left">文档创建日期</td>
+</tr>
+<tr>
+<td align="left">fileModifiedDate</td>
+<td align="left">文档修改时间（精确到天）</td>
+</tr>
+<tr>
+<td align="left">lastModified</td>
+<td align="left">文档修改时间（精确到秒）</td>
+</tr>
+<tr>
+<td align="left">fileSize</td>
+<td align="left">文档大小</td>
+</tr>
+<tr>
+<td align="left">fgColor</td>
+<td align="left">定义文档的前景色</td>
+</tr>
+<tr>
+<td align="left">bgColor</td>
+<td align="left">定义文档的背景色</td>
+</tr>
+<tr>
+<td align="left">linkColor</td>
+<td align="left">定义“未访问”的超链接颜色</td>
+</tr>
+<tr>
+<td align="left">alinkColor</td>
+<td align="left">定义“被激活”的超链接颜色</td>
+</tr>
+<tr>
+<td align="left">vlinkColor</td>
+<td align="left">定义“访问过”的超链接颜色</td>
+</tr>
+</tbody></table>
+<p><strong>2、document对象方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">document.write()</td>
+<td align="left">输入文本到当前打开的文档</td>
+</tr>
+<tr>
+<td align="left">document.writeIn()</td>
+<td align="left">输入文本到当前打开的文档，并添加换行符“\n”</td>
+</tr>
+<tr>
+<td align="left">document.getElementById()</td>
+<td align="left">获取某个id值的元素</td>
+</tr>
+<tr>
+<td align="left">document.getElementsByName()</td>
+<td align="left">获取某个name值的元素，用于表单元素</td>
+</tr>
+</tbody></table>
+<p>上面列出了document对象常用的属性和方法，跟window对象的学习一样，在<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_list.aspx">JavaScript入门</a>阶段，站长只会给大家讲解最实用的。对于那种压根儿用不上的，我也懒得花时间去写。</p>
+<h3 id="二、训练题（1）网页动态标题"><a href="#二、训练题（1）网页动态标题" class="headerlink" title="二、训练题（1）网页动态标题"></a>二、训练题（1）网页动态标题</h3><p>在浏览网页的时候，我们经常看到不少网页标题在闪动。这一节我们给大家讲解一个实际开发中的技巧“网页动态标题”。</p>
+<p>实现代码如下：</p>
+<table>
+<thead>
+<tr>
+<th>1234567891011121314151617181920212223242526272829</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``//定义全局变量，用于标识``    ``var</code> <code>flag = 0;``    ``window.onload = ``function</code> <code>() &#123;``      ``//定时器``      ``setInterval(``&quot;titleChange()&quot;``, 1000);``    ``&#125;``    ``//定义函数``    ``function</code> <code>titleChange() &#123;``      ``if``(flag==0)``      ``&#123;``        ``document.title = ``&quot;★☆★绿叶学习网★☆★&quot;``;``        ``flag = 1;``      ``&#125;``      ``else``      ``&#123;``        ``document.title = ``&quot;☆★☆绿叶学习网☆★☆&quot;``;``        ``flag = 0;``      ``&#125;``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEyLTgtMS5wbmc?x-oss-process=image/format,png" alt="JavaScript实现网页动态标题_"></p>
+<p>分析：</p>
+<p>这个例子使用在线测试不会有效果，请大家在本地编辑器中测试预览。</p>
+<p>这里主要使用了页面加载事件window.onload和<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_js/js_10.6.aspx">JavaScript定时器</a>。算法很简单，只要使用了一个全局变量作为标识。</p>
+<h2 id="5、DOM对象"><a href="#5、DOM对象" class="headerlink" title="5、DOM对象"></a>5、DOM对象</h2><p>DOM，全称“Document Object Model（文档对象模型）”，它是由W3C组织定义的一个标准。</p>
+<p>很多书籍一上来就大篇幅地展开说明DOM的历史和定义，看了老半天也不知道DOM是什么鬼。在这里，关于DOM的风流逸事就不展开了，免得初学者看得一头雾水，也浪费时间。</p>
+<p>在前端开发时，我们往往需要在页面某个地方添加一个元素或者删除元素，这种添加元素、删除元素的操作就是通过DOM来实现的。</p>
+<p>说白了，DOM就是一个接口，我们可以通过DOM来操作页面中各种元素，例如添加元素、删除元素、替换元素等。这下大家就懂了吧。</p>
+<p>记住，DOM就是文档对象模型，文档对象模型就是DOM，很多人在学习DOM的时候看到“文档对象模型”还不知道是什么？= =||</p>
+<p>在DOM学习中，记住最重要的一句话：每一个元素节点都看成一个“对象”。由于元素节点也是一个对象，因此他们有自身的属性和方法。</p>
+<h3 id="一、DOM节点属性"><a href="#一、DOM节点属性" class="headerlink" title="一、DOM节点属性"></a>一、DOM节点属性</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">parentNode</td>
+<td align="left">获取当前节点的父节点</td>
+</tr>
+<tr>
+<td align="left">childNodes</td>
+<td align="left">获取当前节点的子节点集合</td>
+</tr>
+<tr>
+<td align="left">firstChild</td>
+<td align="left">获取当前节点的第一个子节点</td>
+</tr>
+<tr>
+<td align="left">lastChild</td>
+<td align="left">获取当前节点的最后一个子节点</td>
+</tr>
+<tr>
+<td align="left">previousSibling</td>
+<td align="left">获取当前节点的前一个兄弟节点</td>
+</tr>
+<tr>
+<td align="left">nextSibling</td>
+<td align="left">获取当前节点的后一个兄弟节点</td>
+</tr>
+<tr>
+<td align="left">attributes</td>
+<td align="left">元素的属性列表</td>
+</tr>
+</tbody></table>
+<h3 id="二、DOM节点操作"><a href="#二、DOM节点操作" class="headerlink" title="二、DOM节点操作"></a>二、DOM节点操作</h3><p>在JavaScript中，可以通过以下2种方式来选中指定元素：</p>
+<p>（1）getElementById()；</p>
+<p>在JavaScript中，如果想通过id来选中元素，我们可以使用document对象的getElementById()方法。</p>
+<p>getElementById()方法类似于CSS中的id选择器。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>document.getElementById(``&quot;元素id&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>12345678910111213</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;div id=``&quot;lvye&quot;``&gt;绿叶学习网JavaScript入门教程&lt;/div&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>e = document.getElementById(``&quot;lvye&quot;``);``    ``e.style.color = ``&quot;red&quot;``;``  ``&lt;/script&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEzLTQtMS5wbmc?x-oss-process=image/format,png" alt="getElementById()"></p>
+<p>分析：</p>
+<p>这里使用document.getElementById()的方法获取id为lvye的div元素，然后把这个DOM对象赋值给变量e，然后使用DOM对象的style对象来设置div元素颜色为红色。</p>
+<p>（2）getElementsByName()；</p>
+<p>在JavaScript中，如果想通过name来选中元素，我们可以使用document对象的getElementsByName()方法。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>document.getElementsByName(``&quot;表单元素name值&quot;``);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>getElementsByName()方法都是用于获取表单元素。</p>
+<p>与getElementById()方法不同的是，使用该方法的返回值是一个数组，而不是一个元素。因此，我们想要获取具体的某一个表单元素，就必须通过数组下标来获取。</p>
+<p>注意，是getElementsByName()而不是getElementByName()。数组嘛，当然是复数。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio1&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;HTML&quot;``/&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio2&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;CSS&quot;``/&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio3&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;JavaScript&quot;``/&gt;``  ``&lt;input name=``&quot;web&quot;</code> <code>id=``&quot;radio4&quot;</code> <code>type=``&quot;radio&quot;</code> <code>value=``&quot;jQuery&quot;``/&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``alert(document.getElementsByName(``&quot;web&quot;``)[0].value);``  ``&lt;/script&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzEzLTQtMi5wbmc?x-oss-process=image/format,png" alt="getElementsByName()"></p>
+<p>分析：</p>
+<p>getElementsByName()方法在实际开发中比较少用，大家了解一下即可。</p>
+<p>其实可以这样说， getElementById()和getElementsByName()这两种方法是“JavaScript选择器”。</p>
+<p>除了getElementById()和getElementsByName()这两种方法，JavaScript还提供另外一种getElementByTagName()方法，这个方法类似于CSS中的元素选择器。但是getElementByTagName()方法有个很大缺点，它会把整个页面中相同的元素都选中。用起来也比较麻烦，实际开发中很少用到。</p>
+<p><strong>1、创建节点</strong></p>
+<p>在JavaScript中，创建新节点都是先用document对象中的createElement()和createTextNode()这2种方法创建一个元素节点，然后再通过appendChild()、insertBefore()等方法把新元素节点插入现有的元素节点中去。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th><code>var</code> <code>e = document.createElement(``&quot;元素名&quot;``);``var</code> <code>txt = document.createTextNode(``&quot;元素内容&quot;``);``e.appendChild(t);  ``//把元素内容插入元素中去</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>2、插入节点</strong></p>
+<p>在JavaScript中，插入节点有2种方法：appendChild()和insertBefore()。</p>
+<p>（1）appendChild()</p>
+<p>在JavaScript中，我们可以使用appenChild()方法把新的节点插入到当前节点的“内部”。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.appendChild(``new``)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj表示当前节点，new表示新节点。</p>
+<p>（2）insertBefore()</p>
+<p>在JavaScript中，我们可以使用insertBefore()方法将新的子节点添加到当前节点的“末尾”。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.insertBefore(``new``,ref)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj表示父节点；</p>
+<p>new表示新的子节点；</p>
+<p>ref指定一个节点，在这个节点前插入新的节点。</p>
+<p><strong>3、删除节点</strong></p>
+<p>在JavaScript中，我们可以使用removeChild()方法来删除当前节点下的某个子节点。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.removeChild(oldChild);</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数obj表示当前节点，而参数oldChild表示需要当前节点内部的某个子节点。</p>
+<p><strong>4、复制节点</strong></p>
+<p>在JavaScript中，我们可以使用cloneNode()方法来实现复制节点。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.cloneNode(bool)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>参数obj表示被复制的节点，而参数bool是一个布尔值，取值如下：</p>
+<p>（1）1或true：表示复制节点本身以及复制该节点下的所有子节点；</p>
+<p>（2）0或false：表示仅仅复制节点本身，不复制该节点下的子节点；</p>
+<p><strong>5、替换节点</strong></p>
+<p>在JavaScript中，我们可以使用replaceChild()方法来实现替换节点。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.replaceChild(``new``,old)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj，表示被替换节点的父节点；</p>
+<p>new，表示替换后的新节点；</p>
+<p>old，需要被替换的旧节点。</p>
+<p><strong>6、innerHTML和innerText</strong></p>
+<p>在JavaScript中，我们可以使用innerHTML和innerText这2个属性很方便地获取和设置某一个元素内部子元素或文本。</p>
+<p>innerHTML属性被多数浏览器所支持，而innerText只能被IE、chrome等支持而不被Firefox支持。</p>
+<p><strong>7、JavaScript操作CSS样式</strong></p>
+<p>在JavaScript中，对于元素的CSS操作，我们使用的是DOM对象中的style对象来操作。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><code>obj.style.属性名;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>说明：</p>
+<p>obj指的是DOM对象，也就是通过document.getElementById()等获取而来的DOM元素节点。</p>
+<h2 id="6、JavaScript对象"><a href="#6、JavaScript对象" class="headerlink" title="6、JavaScript对象"></a>6、JavaScript对象</h2><h3 id="一、事件是什么？"><a href="#一、事件是什么？" class="headerlink" title="一、事件是什么？"></a>一、事件是什么？</h3><p>在JavaScript中，事件往往是页面的一些动作引起的，例如当用户按下鼠标或者提交表单，甚至在页面移动鼠标时，事件都会出现。</p>
+<h3 id="二、JavaScript事件"><a href="#二、JavaScript事件" class="headerlink" title="二、JavaScript事件"></a>二、JavaScript事件</h3><p>在JavaScript中，调用事件的方式共有2种：</p>
+<p>（1）在script标签中调用；</p>
+<p>在script标签中调用事件，也就是在<script></script标签内部调用事件。</p>
+<p>语法：</p>
+<table>
+<thead>
+<tr>
+<th>12345</th>
+<th><code>var</code> <code>变量名 = document.getElementById(``&quot;元素id&quot;``);``//获取某个元素，并赋值给某个变量``变量名.事件处理器 = ``function``()``&#123;``  ``……``&#125;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input id=``&quot;btn&quot;</code> <code>type=``&quot;button&quot;</code> <code>value=``&quot;提交&quot;</code> <code>/&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``var</code> <code>e = document.getElementById(``&quot;btn&quot;``);``    ``e.onclick = ``function</code> <code>() &#123;``      ``alert(``&quot;绿叶学习网&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMS5wbmc?x-oss-process=image/format,png" alt="JavaScript事件调用方式"></p>
+<p>分析：</p>
+<p>当点击了按钮之后，JavaScript就会调用鼠标的点击（onclick）事件，效果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMi5wbmc?x-oss-process=image/format,png" alt="JavaScript调用事件"></p>
+<p>很多人觉得很奇怪，document.getElementById()获取的是一个元素，能赋值给一个变量吗？答案是可以的。那问题又来了，为什么要使用document.getElementById()来获取一个元素赋值给一个变量呢？用以下代码不行么？</p>
+<table>
+<thead>
+<tr>
+<th>12345</th>
+<th><code>&lt;script type=``&quot;text/javascript&quot;``&gt;``  ``document.getElementById(``&quot;btn&quot;``).onclick = ``function``&#123;``    ``alert(``&quot;绿叶学习网&quot;``);``  ``&#125;``&lt;/script&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>其实上述代码也是可行的，只不过呢，如果不使用document.getElementById()来获取一个元素赋值给一个变量，以后我们如果要对该元素进行多次不同操作，岂不是每次都要写document.getElementById()？这样的话，代码就会显得很冗余。</p>
+<p>（2）在元素中调用；</p>
+<p>在元素事件中引入JS，就是指在元素的某一个属性中直接编写JavaScript程序或调用JavaScript函数，这个属性指的是元素的“事件属性”。</p>
+<p>举例1：（在元素事件属性中直接编写JavaScript）</p>
+<table>
+<thead>
+<tr>
+<th>123456789</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>onclick=``&quot;alert(&#39;绿叶学习网&#39;)&quot;</code> <code>value=``&quot;按钮&quot;``/&gt;``&lt;body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果如下（点击按钮后的效果）：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItMy5wbmc?x-oss-process=image/format,png" alt="在元素中调用JavaScript事件"></p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>123456789101112131415</th>
+<th><code>&lt;!DOCTYPE html&gt;``&lt;html xmlns=``&quot;http://www.w3.org/1999/xhtml&quot;``&gt;``&lt;head&gt;``  ``&lt;title&gt;&lt;/title&gt;``  ``&lt;script type=``&quot;text/javascript&quot;``&gt;``    ``function</code> <code>alertMessage()``    ``&#123;``      ``alert(``&quot;绿叶学习网&quot;``);``    ``&#125;``  ``&lt;/script&gt;``&lt;/head&gt;``&lt;body&gt;``  ``&lt;input type=``&quot;button&quot;</code> <code>onclick=``&quot;alertMessage()&quot;</code> <code>value=``&quot;按钮&quot;``/&gt;``&lt;body&gt;``&lt;/html&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在浏览器预览效果（点击按钮后的效果）如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2pzLzE0LTItNC5wbmc?x-oss-process=image/format,png" alt="在元素中调用事件"></p>
+<p>分析：</p>
+<p>那么这两种方法有什么本质的区别呢？其实，第2种方法不需要使用getElementById()等方法来获取DOM，然后才调用函数或方法。因为它是直接在JavaScript元素中调用的。</p>
+<p>这2种调用JavaScript事件的方式，大家刚刚开始看不理解没关系，我们只是给大家说个语法，留个印象。在接下来的章节中，我们会经常接触。</p>
+<p><strong>1、鼠标事件</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onclick</td>
+<td align="left">鼠标单击事件</td>
+</tr>
+<tr>
+<td align="left">ondbclick</td>
+<td align="left">鼠标双击事件</td>
+</tr>
+<tr>
+<td align="left">onmouseover</td>
+<td align="left">鼠标移入事件</td>
+</tr>
+<tr>
+<td align="left">onmouseout</td>
+<td align="left">鼠标移出事件</td>
+</tr>
+<tr>
+<td align="left">onmousemove</td>
+<td align="left">鼠标移动事件</td>
+</tr>
+<tr>
+<td align="left">onmousedown</td>
+<td align="left">鼠标按下事件</td>
+</tr>
+<tr>
+<td align="left">onmouseup</td>
+<td align="left">鼠标松开事件</td>
+</tr>
+</tbody></table>
+<p><strong>2、键盘事件</strong></p>
+<p>JavaScript键盘事件只有3个：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onkeydown</td>
+<td align="left">按下键事件（包括数字键、功能键）</td>
+</tr>
+<tr>
+<td align="left">onkeypress</td>
+<td align="left">按下键事件（只包含数字键）</td>
+</tr>
+<tr>
+<td align="left">onkeyup</td>
+<td align="left">放开键事件（包括数字键、功能键）</td>
+</tr>
+</tbody></table>
+<p>三个事件的执行顺序如下：onkeydown -&gt; onkeypress -&gt;onkeyup。</p>
+<p><strong>3、表单事件</strong></p>
+<p>在JavaScript中，常用的表单事件有4种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onfocus</td>
+<td align="left">获取焦点事件</td>
+</tr>
+<tr>
+<td align="left">onblur</td>
+<td align="left">失去焦点事件</td>
+</tr>
+<tr>
+<td align="left">onchange</td>
+<td align="left">状态改变事件</td>
+</tr>
+<tr>
+<td align="left">onselect</td>
+<td align="left">选中文本事件</td>
+</tr>
+</tbody></table>
+<p><strong>4、编辑事件</strong></p>
+<p>在JavaScript中，常见的编辑事件有3种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">oncopy</td>
+<td align="left">复制事件</td>
+</tr>
+<tr>
+<td align="left">oncut</td>
+<td align="left">剪切事件</td>
+</tr>
+<tr>
+<td align="left">onpaste</td>
+<td align="left">粘贴事件</td>
+</tr>
+</tbody></table>
+<p>这3个事件都对应有一个“onbeforeXXX”事件，表示发生在该事件之前的事件。</p>
+<p><strong>5、页面相关事件</strong></p>
+<p>在JavaScript中，常用的页面相关事件有3种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onload</td>
+<td align="left">页面加载事件</td>
+</tr>
+<tr>
+<td align="left">onresize</td>
+<td align="left">页面大小事件</td>
+</tr>
+<tr>
+<td align="left">onerror</td>
+<td align="left">页面或图片加载出错事件</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/11/23/JavaScript%E5%9F%BA%E7%A1%80/" rel="prev" title="javascript">
+                  <i class="fa fa-chevron-left"></i> javascript
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/11/21/%E9%A6%96%E6%AC%A1%E5%8F%91%E5%B8%83/" rel="next" title="首次发布">
+                  首次发布 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">等来清晨</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</body>
+</html>
